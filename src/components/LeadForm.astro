@@ -1,0 +1,147 @@
+---
+import type { CollectionEntry } from "astro:content";
+type Data = CollectionEntry<"segments">["data"];
+const { data } = Astro.props as { data: Data };
+const selectedIndex =
+  data.segment === "new_build" ? 0 : data.segment === "small_flat" ? 1 : 2;
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+const uid = `${data.locale}-${data.segment}`;
+---
+
+<form class="lead-form" data-lead-form enctype="multipart/form-data" novalidate>
+  <input type="hidden" name="locale" value={data.locale} />
+  <input type="hidden" name="segment" value={data.segment} />
+  <input type="hidden" name="idempotencyKey" value="" data-idempotency />
+  <input
+    class="honeypot"
+    type="text"
+    name="companyWebsite"
+    tabindex="-1"
+    autocomplete="off"
+    aria-hidden="true"
+  />
+  <div class="form-grid">
+    <div class="field">
+      <label for={`object-${uid}`}>{data.form.objectLabel}</label>
+      <select id={`object-${uid}`} name="objectType" required>
+        {
+          data.form.objectOptions.map((option, index) => (
+            <option
+              value={["new_build", "small_flat", "rental"][index]}
+              selected={index === selectedIndex}
+            >
+              {option}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label for={`area-${uid}`}>{data.form.areaLabel}</label>
+      <input
+        id={`area-${uid}`}
+        name="area"
+        type="number"
+        inputmode="numeric"
+        min="10"
+        max="500"
+        placeholder="42"
+      />
+    </div>
+    <div class="field field-wide">
+      <label for={`stage-${uid}`}>{data.form.stageLabel}</label>
+      <select id={`stage-${uid}`} name="projectStage" required>
+        {
+          data.form.stageOptions.map((option, index) => (
+            <option
+              value={
+                ["before_renovation", "during_renovation", "before_purchase"][
+                  index
+                ]
+              }
+            >
+              {option}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label for={`name-${uid}`}>{data.form.nameLabel}</label>
+      <input
+        id={`name-${uid}`}
+        name="name"
+        type="text"
+        autocomplete="name"
+        minlength="2"
+        maxlength="80"
+        required
+      />
+    </div>
+    <div class="field">
+      <label for={`contact-${uid}`}>{data.form.contactLabel}</label>
+      <input
+        id={`contact-${uid}`}
+        name="contact"
+        type="text"
+        autocomplete="email"
+        minlength="5"
+        maxlength="160"
+        aria-describedby={`contact-hint-${uid}`}
+        required
+      />
+      <small id={`contact-hint-${uid}`}>{data.form.contactHint}</small>
+    </div>
+    <div class="field field-wide">
+      <label for={`file-${uid}`}>{data.form.fileLabel}</label>
+      <input
+        id={`file-${uid}`}
+        name="plan"
+        type="file"
+        accept="application/pdf,image/jpeg,image/png,image/webp"
+        aria-describedby={`file-hint-${uid}`}
+      />
+      <small id={`file-hint-${uid}`}>{data.form.fileHint}</small>
+    </div>
+    <div class="field field-wide">
+      <label for={`message-${uid}`}>{data.form.messageLabel}</label>
+      <textarea id={`message-${uid}`} name="message" maxlength="1500"
+      ></textarea>
+    </div>
+  </div>
+  {siteKey && <div class="cf-turnstile" data-sitekey={siteKey} />}
+  <label class="checkbox"
+    ><input type="checkbox" name="consent" value="yes" required /><span
+      >{data.form.consent}</span
+    ></label
+  >
+  <button
+    class="button"
+    type="submit"
+    data-submit
+    data-label={data.form.submit}
+    data-sending={data.form.sending}
+    >{data.form.submit}<span aria-hidden="true">→</span></button
+  >
+  <p
+    class="form-status"
+    role="status"
+    aria-live="polite"
+    data-form-status
+    data-error={data.form.error}
+    data-success-title={data.form.successTitle}
+    data-success-text={data.form.successText}
+  >
+  </p>
+</form>
+
+{
+  siteKey && (
+    <script
+      is:inline
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    />
+  )
+}

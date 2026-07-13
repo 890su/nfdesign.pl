@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SegmentLanding from "@/components/SegmentLanding.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const entries = await getCollection("segments");
+  return entries.map((entry) => ({
+    params: { locale: entry.data.locale, segment: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const allEntries = await getCollection("segments");
+const alternates = allEntries
+  .filter(
+    (candidate) => candidate.data.translationKey === entry.data.translationKey,
+  )
+  .map((candidate) => ({
+    locale: candidate.data.locale,
+    label: candidate.data.locale.toUpperCase(),
+    href: `/${candidate.data.locale}/${candidate.data.slug}/`,
+  }));
+---
+
+<BaseLayout
+  locale={entry.data.locale}
+  title={entry.data.seo.title}
+  description={entry.data.seo.description}
+  alternates={alternates}
+  nav={entry.data.nav}
+  footer={entry.data.footer}
+>
+  <SegmentLanding data={entry.data} />
+</BaseLayout>

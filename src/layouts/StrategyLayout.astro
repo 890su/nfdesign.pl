@@ -1,0 +1,137 @@
+---
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+Astro.response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive" />
+    <meta name="theme-color" content="#f3f4ef" />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+  </head>
+  <body class="strategy-page">
+    <a class="strategy-skip" href="#strategy-main">К содержанию</a>
+    <header class="strategy-header">
+      <div class="strategy-shell strategy-header__inner">
+        <a class="strategy-brand" href="/strategy/" aria-label="Strategy index">
+          <span>N/D</span> WORKING DECK
+        </a>
+        <a class="strategy-landing-link" href="/pl/nowe-mieszkanie/"
+          >Открыть лендинг <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="strategy-main"><slot /></main>
+    <footer class="strategy-footer">
+      <div class="strategy-shell">
+        Временная рабочая презентация · не для индексации
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .strategy-page {
+    --strategy-paper: #f3f4ef;
+    --strategy-ink: #111516;
+    --strategy-blue: #1545d8;
+    --strategy-red: #f04b32;
+    --strategy-line: rgba(17, 21, 22, 0.22);
+    background: var(--strategy-paper);
+    color: var(--strategy-ink);
+  }
+
+  :global(.strategy-shell) {
+    width: min(calc(100% - 2.5rem), 78rem);
+    margin-inline: auto;
+  }
+  .strategy-header {
+    border-bottom: 1px solid var(--strategy-ink);
+    background: var(--strategy-paper);
+  }
+  .strategy-header__inner {
+    min-height: 4.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .strategy-brand,
+  .strategy-landing-link {
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .strategy-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+  .strategy-brand span {
+    display: grid;
+    place-items: center;
+    width: 2.15rem;
+    height: 2.15rem;
+    background: var(--strategy-ink);
+    color: var(--strategy-paper);
+    font-size: 0.68rem;
+    letter-spacing: 0;
+  }
+  .strategy-landing-link {
+    color: var(--strategy-blue);
+  }
+  .strategy-landing-link span {
+    font-size: 1rem;
+  }
+  .strategy-footer {
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--strategy-ink);
+    color: rgba(17, 21, 22, 0.66);
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .strategy-skip {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 5;
+    padding: 0.7rem 1rem;
+    transform: translateY(-180%);
+    background: var(--strategy-ink);
+    color: white;
+    text-decoration: none;
+  }
+  .strategy-skip:focus {
+    transform: translateY(0);
+  }
+  @media (max-width: 620px) {
+    :global(.strategy-shell) {
+      width: min(calc(100% - 2rem), 78rem);
+    }
+    .strategy-header__inner {
+      min-height: 4.25rem;
+    }
+    .strategy-landing-link {
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+    }
+  }
+</style>

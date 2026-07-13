@@ -1,0 +1,162 @@
+---
+import "@/styles/global.css";
+import CookieBanner from "@/components/CookieBanner.astro";
+
+interface Alternate {
+  locale: string;
+  href: string;
+  label: string;
+}
+interface Props {
+  locale: "pl" | "uk" | "ru";
+  title: string;
+  description: string;
+  alternates: Alternate[];
+  nav: { method: string; result: string; price: string; faq: string };
+  footer: { note: string; privacy: string; terms: string };
+}
+const { locale, title, description, alternates, nav, footer } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+const labels = { pl: "Polski", uk: "Українська", ru: "Русский" };
+const a11y = {
+  pl: {
+    skip: "Przejdź do treści",
+    main: "Główna nawigacja",
+    language: "Język",
+    menuOpen: "Otwórz menu",
+    menuClose: "Zamknij menu",
+    navCta: "Wyślij rzut",
+  },
+  uk: {
+    skip: "Перейти до змісту",
+    main: "Головна навігація",
+    language: "Мова",
+    menuOpen: "Відкрити меню",
+    menuClose: "Закрити меню",
+    navCta: "Надіслати план",
+  },
+  ru: {
+    skip: "Перейти к содержанию",
+    main: "Основная навигация",
+    language: "Язык",
+    menuOpen: "Открыть меню",
+    menuClose: "Закрыть меню",
+    navCta: "Отправить план",
+  },
+}[locale];
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f3f4ef" />
+    <meta name="color-scheme" content="light" />
+    <link rel="canonical" href={canonical} />
+    {
+      alternates.map((alternate) => (
+        <link
+          rel="alternate"
+          hreflang={`${alternate.locale}-PL`}
+          href={new URL(alternate.href, canonical)}
+        />
+      ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(
+        alternates.find((item) => item.locale === "pl")?.href ??
+          canonical.pathname,
+        canonical,
+      )}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={`${locale}_PL`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{a11y.skip}</a>
+    <header class="site-header" data-site-header>
+      <div class="container header-inner">
+        <a class="brand" href={`/${locale}/`} aria-label="Need for Design">
+          <span class="brand-mark">N/D</span><span
+            >need <small>/ for design</small></span
+          >
+        </a>
+        <nav
+          class="main-nav"
+          id="site-navigation"
+          aria-label={a11y.main}
+          data-site-nav
+        >
+          <a href="#result" data-section-link>{nav.result}</a><a
+            href="#method"
+            data-section-link>{nav.method}</a
+          ><a href="#price" data-section-link>{nav.price}</a><a
+            href="#faq"
+            data-section-link>{nav.faq}</a
+          ><a class="mobile-nav-cta" href="#contact"
+            >{a11y.navCta}<span aria-hidden="true">→</span></a
+          >
+        </nav>
+        <div class="header-actions">
+          <nav class="language-switch" aria-label={a11y.language}>
+            {
+              alternates.map((alternate) => (
+                <a
+                  href={alternate.href}
+                  hreflang={`${alternate.locale}-PL`}
+                  lang={alternate.locale}
+                  aria-current={
+                    alternate.locale === locale ? "true" : undefined
+                  }
+                  title={labels[alternate.locale as keyof typeof labels]}
+                >
+                  {alternate.locale.toUpperCase()}
+                </a>
+              ))
+            }
+          </nav>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-navigation"
+            aria-label={a11y.menuOpen}
+            data-menu-toggle
+            data-label-open={a11y.menuOpen}
+            data-label-close={a11y.menuClose}
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav-scrim" data-nav-scrim></div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href={`/${locale}/`}
+            ><span class="brand-mark">N/D</span><span
+              >need <small>/ for design</small></span
+            ></a
+          ><p class="mono">{footer.note}</p>
+        </div>
+        <div class="footer-links">
+          <a href={`/${locale}/privacy/`}>{footer.privacy}</a><a
+            href={`/${locale}/terms/`}>{footer.terms}</a
+          >
+        </div>
+      </div>
+    </footer>
+    <CookieBanner locale={locale} />
+    <script is:inline type="module" src="/scripts/site.js"></script>
+  </body>
+</html>

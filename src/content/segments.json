@@ -1,0 +1,2052 @@
+[
+  {
+    "id": "pl-new-build",
+    "translationKey": "new-build",
+    "locale": "pl",
+    "segment": "new_build",
+    "slug": "nowe-mieszkanie",
+    "seo": {
+      "title": "Koncepcja wnętrza nowego mieszkania w Warszawie",
+      "description": "Funkcjonalny układ, kierunek wizualny i plan decyzji przed rozpoczęciem remontu. Ekspresowa koncepcja wnętrza w 3–5 dni roboczych."
+    },
+    "nav": {
+      "method": "Jak pracujemy",
+      "result": "Co otrzymasz",
+      "price": "Cena",
+      "faq": "Pytania"
+    },
+    "hero": {
+      "eyebrow": "Warszawa · przed remontem",
+      "title": "Podejmij najważniejsze decyzje, zanim wejdzie ekipa.",
+      "lead": "Na podstawie rzutu, zdjęć i rozmowy o Waszym życiu przygotujemy funkcjonalny układ, spójny kierunek wnętrza i jasny plan dalszych działań.",
+      "benefits": [
+        "1 rekomendowany układ",
+        "koncepcja kluczowych stref",
+        "wynik w 3–5 dni roboczych"
+      ],
+      "cta": "Wyślij rzut mieszkania",
+      "secondaryCta": "Zobacz przykład metody"
+    },
+    "proof": {
+      "label": "Zamiast tygodni niepewności",
+      "value": "jeden kierunek",
+      "note": "Najpierw funkcja. Potem wygląd. Na końcu kolejność działań."
+    },
+    "pains": {
+      "eyebrow": "Moment decyzji",
+      "title": "Remont nie powinien projektować się sam na budowie.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Układ wciąż jest otwarty",
+          "text": "Nie wiadomo, gdzie staną duże meble, jak poprowadzić codzienne trasy i ile miejsca zostawić na przejścia."
+        },
+        {
+          "number": "02",
+          "title": "Decyzje się rozjeżdżają",
+          "text": "Światło, kolory, przechowywanie i zakupy powstają osobno, bez jednego kierunku."
+        },
+        {
+          "number": "03",
+          "title": "Ekipa potrzebuje odpowiedzi",
+          "text": "Każde opóźnienie zwiększa presję, a decyzje podejmowane w pośpiechu kończą się kosztownymi poprawkami."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Konkretny rezultat",
+      "title": "Dokument, z którym można ruszyć dalej.",
+      "items": [
+        {
+          "title": "Układ funkcjonalny",
+          "text": "Rekomendowany plan mebli i najważniejszych stref z wyjaśnieniem decyzji."
+        },
+        {
+          "title": "Kierunek wizualny",
+          "text": "Paleta, materiały, proporcje i atmosfera dopasowane do mieszkańców."
+        },
+        {
+          "title": "Kluczowe wybory",
+          "text": "Typy mebli, światła i rozwiązań, które mają największy wpływ na całość."
+        },
+        {
+          "title": "Plan dalszych działań",
+          "text": "Co zatwierdzić teraz, co przekazać ekipie, a co można odłożyć."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Przykład metody",
+      "title": "Od pustego rzutu do logicznego scenariusza dnia.",
+      "text": "To schemat pokazujący sposób myślenia, nie publikowany projekt klienta. Każda koncepcja powstaje od nowa na podstawie realnych wymiarów i potrzeb.",
+      "before": "Rzut wejściowy",
+      "after": "Kierunek rozwiązania",
+      "disclaimer": "Schemat poglądowy — nie jest rysunkiem wykonawczym.",
+      "notes": [
+        "przechowywanie przy wejściu",
+        "stół pracuje także jako miejsce do pracy",
+        "czytelna strefa odpoczynku"
+      ]
+    },
+    "process": {
+      "eyebrow": "Prosty proces",
+      "title": "Od rzutu do decyzji w czterech krokach.",
+      "items": [
+        {
+          "title": "Wysyłasz materiały",
+          "text": "Rzut, zdjęcia, krótki opis sytuacji i termin remontu."
+        },
+        {
+          "title": "Rozmawiamy 30 minut",
+          "text": "Pytamy o domowników, rytm dnia, przechowywanie i priorytety."
+        },
+        {
+          "title": "Projektant opracowuje kierunek",
+          "text": "Łączy funkcję, wygląd i ograniczenia w jedną rekomendację."
+        },
+        {
+          "title": "Otrzymujesz PDF i prezentację",
+          "text": "Omawiamy decyzje i wprowadzamy jedną turę drobnych korekt."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Pilotażowa oferta",
+      "title": "Design Start",
+      "priceLabel": "od",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 dni roboczych",
+      "includedTitle": "W cenie",
+      "included": [
+        "analiza potrzeb i materiałów",
+        "1 rekomendowany układ",
+        "koncepcja głównych stref",
+        "PDF 8–15 stron",
+        "prezentacja online",
+        "1 tura drobnych korekt"
+      ],
+      "excludedTitle": "Poza zakresem",
+      "excluded": [
+        "rysunki wykonawcze",
+        "dokładny kosztorys",
+        "nadzór nad ekipą",
+        "nieograniczone warianty"
+      ],
+      "cta": "Sprawdź, czy format pasuje"
+    },
+    "comparison": {
+      "title": "Ekspresowa koncepcja czy pełny projekt?",
+      "express": "Design Start",
+      "full": "Pełny projekt",
+      "rows": [
+        {
+          "label": "Główna funkcja i układ",
+          "express": "tak",
+          "full": "tak, z wariantami"
+        },
+        {
+          "label": "Kierunek wizualny",
+          "express": "kluczowe strefy",
+          "full": "szczegółowe wizualizacje"
+        },
+        { "label": "Rysunki wykonawcze", "express": "nie", "full": "tak" },
+        { "label": "Czas", "express": "3–5 dni", "full": "wiele tygodni" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Ekspert, nie generator",
+      "title": "Technologia przyspiesza. Projektant podejmuje decyzje.",
+      "text": "Koncepcja opiera się na doświadczeniu w projektowaniu mieszkań i lokali. Narzędzia AI pomagają szybciej pokazać atmosferę, ale nie decydują o układzie, wymiarach ani wykonalności.",
+      "points": [
+        "funkcja sprawdzana przed estetyką",
+        "pomysły filtrowane przez realne ograniczenia",
+        "jednoznaczne rekomendacje zamiast galerii inspiracji"
+      ],
+      "aiNote": "Wizualizacje koncepcyjne pokazują kierunek, nie zastępują dokumentacji technicznej."
+    },
+    "faq": {
+      "eyebrow": "Bez drobnego druku",
+      "title": "Najczęstsze pytania",
+      "items": [
+        {
+          "question": "Czy to jest pełny projekt wnętrza?",
+          "answer": "Nie. To profesjonalna koncepcja najważniejszych decyzji. Nie zawiera kompletu rysunków wykonawczych ani nadzoru."
+        },
+        {
+          "question": "Czy PDF można przekazać ekipie?",
+          "answer": "Można użyć go jako kierunku do rozmowy. Wykonawca nadal potrzebuje pomiarów i właściwej dokumentacji technicznej."
+        },
+        {
+          "question": "Ile wariantów układu otrzymam?",
+          "answer": "W pakiecie jest jedna rekomendowana koncepcja. Alternatywny układ można zamówić jako moduł dodatkowy."
+        },
+        {
+          "question": "Czy można zamówić wizytę na miejscu?",
+          "answer": "Tak, na terenie Warszawy i okolic jako osobną opcję po potwierdzeniu lokalizacji."
+        },
+        {
+          "question": "Jak dokładny musi być rzut?",
+          "answer": "Im lepsze wymiary, tym pewniejsze zalecenia. Przed rozpoczęciem sprawdzimy komplet materiałów."
+        },
+        {
+          "question": "W jakim języku możemy pracować?",
+          "answer": "Strona i proces są przygotowane po polsku, ukraińsku i rosyjsku."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Pierwszy krok",
+      "title": "Wyślij rzut. Ocenimy, czy szybki format wystarczy.",
+      "lead": "Krótka odpowiedź kwalifikacyjna jest bezpłatna. Nie przygotowujemy bezpłatnej koncepcji przed zamówieniem.",
+      "objectLabel": "Typ zadania",
+      "objectOptions": [
+        "Nowe mieszkanie",
+        "Małe mieszkanie",
+        "Mieszkanie na wynajem"
+      ],
+      "areaLabel": "Powierzchnia w m²",
+      "stageLabel": "Na jakim etapie jesteś?",
+      "stageOptions": ["Przed remontem", "W trakcie remontu", "Przed zakupami"],
+      "nameLabel": "Imię",
+      "contactLabel": "Email lub telefon",
+      "contactHint": "Wybierz kontakt, którego rzeczywiście używasz.",
+      "fileLabel": "Rzut mieszkania (opcjonalnie)",
+      "fileHint": "PDF, JPG, PNG lub WebP, maks. 15 MB.",
+      "messageLabel": "Co jest dziś najtrudniejsze?",
+      "consent": "Zgadzam się na przetworzenie danych w celu odpowiedzi na moje zapytanie. Wiem, że mogę wycofać zgodę.",
+      "submit": "Wyślij do wstępnej oceny",
+      "sending": "Wysyłanie…",
+      "successTitle": "Dziękujemy. Rzut jest po bezpiecznej stronie.",
+      "successText": "Wrócimy z krótką oceną formatu w ciągu jednego dnia roboczego.",
+      "error": "Nie udało się wysłać formularza. Sprawdź pola lub spróbuj ponownie."
+    },
+    "footer": {
+      "note": "Ekspresowa koncepcja wnętrza · Warszawa i online",
+      "privacy": "Prywatność",
+      "terms": "Warunki"
+    }
+  },
+  {
+    "id": "pl-small-flat",
+    "translationKey": "small-flat",
+    "locale": "pl",
+    "segment": "small_flat",
+    "slug": "male-mieszkanie",
+    "seo": {
+      "title": "Funkcjonalny projekt małego mieszkania w Warszawie",
+      "description": "Układ, przechowywanie i kierunek wnętrza małego mieszkania lub kawalerki w 3–5 dni roboczych."
+    },
+    "nav": {
+      "method": "Jak pracujemy",
+      "result": "Co otrzymasz",
+      "price": "Cena",
+      "faq": "Pytania"
+    },
+    "hero": {
+      "eyebrow": "Małe mieszkanie · wielozadaniowa przestrzeń",
+      "title": "Zmieszcz więcej życia, nie więcej mebli.",
+      "lead": "Porządkujemy sen, pracę, przechowywanie, odpoczynek i gości w jednej logicznej koncepcji dopasowanej do Twojego rytmu dnia.",
+      "benefits": [
+        "priorytety funkcji",
+        "sprytne przechowywanie",
+        "wynik w 3–5 dni roboczych"
+      ],
+      "cta": "Wyślij rzut mieszkania",
+      "secondaryCta": "Zobacz przykład metody"
+    },
+    "proof": {
+      "label": "Każdy metr ma zadanie",
+      "value": "bez ścisku",
+      "note": "Nie dodajemy funkcji bez końca. Ustalamy, które naprawdę pracują dla Ciebie."
+    },
+    "pains": {
+      "eyebrow": "Mniej metrów, więcej konfliktów",
+      "title": "Problemem rzadko jest sam metraż. Częściej — brak hierarchii.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Wszystko dzieje się naraz",
+          "text": "Stół jest biurem, salon sypialnią, a wejście magazynem bez jasnych granic."
+        },
+        {
+          "number": "02",
+          "title": "Przechowywanie zjada przestrzeń",
+          "text": "Kolejne szafy nie rozwiązują problemu, jeśli nie odpowiadają konkretnym rzeczom i nawykom."
+        },
+        {
+          "number": "03",
+          "title": "Meble blokują ruch",
+          "text": "Pojedynczo pasują, ale razem odbierają światło, przejścia i poczucie oddechu."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Koncepcja szyta do metrażu",
+      "title": "Najpierw wybieramy, co ma działać codziennie.",
+      "items": [
+        {
+          "title": "Mapa scenariuszy",
+          "text": "Sen, praca, posiłki, goście i przechowywanie ułożone według częstotliwości."
+        },
+        {
+          "title": "Układ funkcjonalny",
+          "text": "Jedna rekomendowana kompozycja z czytelnymi przejściami i wymiarami mebli."
+        },
+        {
+          "title": "System przechowywania",
+          "text": "Miejsca przypisane do realnych kategorii rzeczy, nie abstrakcyjna liczba szaf."
+        },
+        {
+          "title": "Lekki obraz wnętrza",
+          "text": "Kolory, materiały i proporcje, które nie przeciążają małej przestrzeni."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Przykład metody",
+      "title": "Jedna przestrzeń może zmieniać rolę bez chaosu.",
+      "text": "Schemat pokazuje logikę wielofunkcyjnej strefy. Nie jest publikowanym projektem klienta ani rysunkiem wykonawczym.",
+      "before": "Funkcje w konflikcie",
+      "after": "Funkcje w rytmie",
+      "disclaimer": "Schemat poglądowy — decyzje wymagają prawdziwych wymiarów.",
+      "notes": [
+        "pełna ściana przechowywania",
+        "składane miejsce pracy",
+        "strefa snu bez blokowania przejścia"
+      ]
+    },
+    "process": {
+      "eyebrow": "Prosty proces",
+      "title": "Cztery kroki do przestrzeni, która pracuje.",
+      "items": [
+        {
+          "title": "Wysyłasz rzut i zdjęcia",
+          "text": "Pokazujesz metraż, obecne rzeczy i ograniczenia."
+        },
+        {
+          "title": "Ustalamy hierarchię",
+          "text": "Oddzielamy codzienne potrzeby od funkcji okazjonalnych."
+        },
+        {
+          "title": "Projektant układa scenariusze",
+          "text": "Testuje przejścia, meble, przechowywanie i światło."
+        },
+        {
+          "title": "Otrzymujesz kierunek",
+          "text": "PDF, prezentacja i jedna tura drobnych korekt."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Pilotażowa oferta",
+      "title": "Design Start",
+      "priceLabel": "od",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 dni roboczych",
+      "includedTitle": "W cenie",
+      "included": [
+        "analiza scenariuszy dnia",
+        "1 rekomendowany układ",
+        "koncepcja przechowywania",
+        "kierunek materiałów i kolorów",
+        "PDF i prezentacja",
+        "1 tura drobnych korekt"
+      ],
+      "excludedTitle": "Poza zakresem",
+      "excluded": [
+        "projekt mebli na wymiar",
+        "rysunki wykonawcze",
+        "pełna lista zakupowa",
+        "nieograniczone warianty"
+      ],
+      "cta": "Sprawdź swój metraż"
+    },
+    "comparison": {
+      "title": "Koncepcja czy pełny projekt?",
+      "express": "Design Start",
+      "full": "Pełny projekt",
+      "rows": [
+        { "label": "Hierarchia funkcji", "express": "tak", "full": "tak" },
+        {
+          "label": "Układ mebli",
+          "express": "1 rekomendacja",
+          "full": "warianty i detal"
+        },
+        {
+          "label": "Meble na wymiar",
+          "express": "kierunek",
+          "full": "dokumentacja"
+        },
+        { "label": "Czas", "express": "3–5 dni", "full": "wiele tygodni" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Projektowanie to selekcja",
+      "title": "Mała przestrzeń potrzebuje decyzji, nie trików.",
+      "text": "Doświadczony projektant sprawdza proporcje, ruch i realne nawyki. AI może szybko pokazać klimat, ale nie rozstrzyga konfliktów funkcjonalnych.",
+      "points": [
+        "najpierw codzienne scenariusze",
+        "meble dobierane do przejść",
+        "przechowywanie liczone według rzeczy"
+      ],
+      "aiNote": "Obrazy koncepcyjne nie gwarantują wymiarów ani wykonalności zabudowy."
+    },
+    "faq": {
+      "eyebrow": "Ważne szczegóły",
+      "title": "Najczęstsze pytania",
+      "items": [
+        {
+          "question": "Czy projekt obejmuje jeden pokój czy całość?",
+          "answer": "Zakres ustalamy po rzucie. Cena od dotyczy prostego mieszkania; większa liczba stref może wymagać dopłaty."
+        },
+        {
+          "question": "Czy otrzymam projekt mebli na wymiar?",
+          "answer": "W bazie określamy funkcję i gabaryt. Szczegółowy projekt wykonawczy jest osobnym modułem."
+        },
+        {
+          "question": "Czy trzeba wyrzucić obecne meble?",
+          "answer": "Nie. W briefie wskazujesz rzeczy, które muszą zostać, a koncepcja uwzględnia ich realne wymiary."
+        },
+        {
+          "question": "Czy można zrobić wszystko online?",
+          "answer": "Tak, jeśli rzut, wymiary i zdjęcia są wystarczające. Wizyta w Warszawie jest opcją."
+        },
+        {
+          "question": "Ile korekt jest w cenie?",
+          "answer": "Jedna skonsolidowana tura drobnych zmian po prezentacji."
+        },
+        {
+          "question": "Czy wizualizacje będą dokładne?",
+          "answer": "Pokazują atmosferę i relacje materiałów. Techniczne wymiary wynikają z planu, nie z obrazu AI."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Pierwszy krok",
+      "title": "Pokaż nam metraż i największy konflikt.",
+      "lead": "W ciągu jednego dnia roboczego ocenimy, czy szybki format pasuje do zadania.",
+      "objectLabel": "Typ zadania",
+      "objectOptions": [
+        "Nowe mieszkanie",
+        "Małe mieszkanie",
+        "Mieszkanie na wynajem"
+      ],
+      "areaLabel": "Powierzchnia w m²",
+      "stageLabel": "Na jakim etapie jesteś?",
+      "stageOptions": ["Przed remontem", "W trakcie remontu", "Przed zakupami"],
+      "nameLabel": "Imię",
+      "contactLabel": "Email lub telefon",
+      "contactHint": "Wybierz kontakt, którego rzeczywiście używasz.",
+      "fileLabel": "Rzut mieszkania (opcjonalnie)",
+      "fileHint": "PDF, JPG, PNG lub WebP, maks. 15 MB.",
+      "messageLabel": "Co musi się zmieścić?",
+      "consent": "Zgadzam się na przetworzenie danych w celu odpowiedzi na zapytanie.",
+      "submit": "Wyślij do wstępnej oceny",
+      "sending": "Wysyłanie…",
+      "successTitle": "Dziękujemy. Sprawdzimy możliwości metrażu.",
+      "successText": "Wrócimy z krótką oceną w ciągu jednego dnia roboczego.",
+      "error": "Nie udało się wysłać formularza. Sprawdź pola lub spróbuj ponownie."
+    },
+    "footer": {
+      "note": "Ekspresowa koncepcja wnętrza · Warszawa i online",
+      "privacy": "Prywatność",
+      "terms": "Warunki"
+    }
+  },
+  {
+    "id": "pl-rental",
+    "translationKey": "rental",
+    "locale": "pl",
+    "segment": "rental",
+    "slug": "mieszkanie-na-wynajem",
+    "seo": {
+      "title": "Koncepcja mieszkania na wynajem w Warszawie",
+      "description": "Praktyczny układ, priorytety budżetu i kierunek wizualny mieszkania pod wynajem w 3–5 dni roboczych."
+    },
+    "nav": {
+      "method": "Jak pracujemy",
+      "result": "Co otrzymasz",
+      "price": "Cena",
+      "faq": "Pytania"
+    },
+    "hero": {
+      "eyebrow": "Mieszkanie na wynajem · Warszawa",
+      "title": "Inwestuj tam, gdzie najemca naprawdę to zauważy.",
+      "lead": "Przygotujemy praktyczną koncepcję pod profil najemcy: układ, priorytety wydatków, odporne rozwiązania i kadry, które dobrze pracują w ogłoszeniu.",
+      "benefits": [
+        "priorytety budżetu",
+        "odporne rozwiązania",
+        "wynik w 3–5 dni roboczych"
+      ],
+      "cta": "Wyślij rzut mieszkania",
+      "secondaryCta": "Zobacz przykład metody"
+    },
+    "proof": {
+      "label": "Nie dekorujemy dla dekoracji",
+      "value": "liczy się zwrot",
+      "note": "Każda rekomendacja ma odpowiadać na trwałość, odbiór oferty lub wygodę najemcy."
+    },
+    "pains": {
+      "eyebrow": "Budżet potrzebuje hierarchii",
+      "title": "Nie każdy wydatek pracuje tak samo na atrakcyjność oferty.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Zakupy są przypadkowe",
+          "text": "Promocje i pojedyncze pomysły nie tworzą spójnego wnętrza ani czytelnej oferty."
+        },
+        {
+          "number": "02",
+          "title": "Ładnie, ale nietrwale",
+          "text": "Materiały i meble nie wytrzymują zmiany najemców albo są trudne do uzupełnienia."
+        },
+        {
+          "number": "03",
+          "title": "Ogłoszenie nie ma mocnego kadru",
+          "text": "Mieszkanie jest poprawne, ale na zdjęciach nic nie zatrzymuje uwagi."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Koncepcja inwestycyjna",
+      "title": "Decyzje uporządkowane według wpływu.",
+      "items": [
+        {
+          "title": "Profil najemcy",
+          "text": "Założenia funkcjonalne dopasowane do realnego odbiorcy, nie do wszystkich naraz."
+        },
+        {
+          "title": "Układ i wyposażenie",
+          "text": "Co musi się znaleźć, jakie gabaryty wybrać i gdzie nie przepłacać."
+        },
+        {
+          "title": "Priorytety budżetu",
+          "text": "Lista: konieczne, warto zrobić, można odłożyć."
+        },
+        {
+          "title": "Kierunek zdjęć",
+          "text": "Akcenty i strefy, które budują pierwsze wrażenie w ogłoszeniu."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Przykład metody",
+      "title": "Neutralna baza nie musi oznaczać anonimowego wnętrza.",
+      "text": "Schemat pokazuje, jak rozdzielamy elementy trwałe, wymienne i fotograficzne. Nie jest publikowanym projektem klienta.",
+      "before": "Wydatki bez hierarchii",
+      "after": "Budżet według wpływu",
+      "disclaimer": "Schemat poglądowy — finalne ceny i dostępność wymagają osobnego doboru.",
+      "notes": [
+        "trwała baza",
+        "wymienne akcenty",
+        "jedna mocna strefa zdjęciowa"
+      ]
+    },
+    "process": {
+      "eyebrow": "Szybka decyzja",
+      "title": "Od obiektu do planu inwestycji.",
+      "items": [
+        {
+          "title": "Wysyłasz rzut i budżet",
+          "text": "Dodajesz zdjęcia, termin i planowany model najmu."
+        },
+        {
+          "title": "Definiujemy odbiorcę",
+          "text": "Ustalamy, komu mieszkanie ma służyć i co wpływa na wybór."
+        },
+        {
+          "title": "Projektant ustala priorytety",
+          "text": "Łączy układ, trwałość, wygląd i limit inwestycji."
+        },
+        {
+          "title": "Otrzymujesz plan działania",
+          "text": "PDF, prezentacja i jedna tura drobnych korekt."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Pilotażowa oferta",
+      "title": "Rental Start",
+      "priceLabel": "od",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 dni roboczych",
+      "includedTitle": "W cenie",
+      "included": [
+        "profil funkcjonalny najemcy",
+        "1 rekomendowany układ",
+        "kierunek materiałów",
+        "priorytety wydatków",
+        "PDF i prezentacja",
+        "1 tura drobnych korekt"
+      ],
+      "excludedTitle": "Poza zakresem",
+      "excluded": [
+        "dokładny kosztorys",
+        "sprawdzanie stanów magazynowych",
+        "zakupy i logistyka",
+        "home staging na miejscu"
+      ],
+      "cta": "Sprawdź swój obiekt"
+    },
+    "comparison": {
+      "title": "Koncepcja czy pełna obsługa?",
+      "express": "Rental Start",
+      "full": "Pełny projekt",
+      "rows": [
+        { "label": "Układ pod najemcę", "express": "tak", "full": "tak" },
+        {
+          "label": "Priorytety budżetu",
+          "express": "tak",
+          "full": "szczegółowa specyfikacja"
+        },
+        {
+          "label": "Zakupy i logistyka",
+          "express": "nie",
+          "full": "moduł / tak"
+        },
+        { "label": "Czas", "express": "3–5 dni", "full": "wiele tygodni" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Projektowanie pod cel",
+      "title": "Estetyka ma pracować dla inwestycji.",
+      "text": "Projektant filtruje pomysły przez trwałość, koszt wymiany i wygodę najemcy. AI przyspiesza warianty obrazu, ale nie ocenia ryzyka inwestycji.",
+      "points": [
+        "wybory według wpływu",
+        "trwałość i łatwa wymiana",
+        "spójność widoczna na zdjęciach"
+      ],
+      "aiNote": "Koncepcja nie jest gwarancją wysokości czynszu ani okresu wynajmu."
+    },
+    "faq": {
+      "eyebrow": "Zakres bez niespodzianek",
+      "title": "Najczęstsze pytania",
+      "items": [
+        {
+          "question": "Czy podajecie dokładny budżet realizacji?",
+          "answer": "Wskazujemy priorytety i poziom rozwiązań. Dokładna wycena i aktualne ceny to osobny moduł."
+        },
+        {
+          "question": "Czy format pasuje do najmu krótkoterminowego?",
+          "answer": "Tak, ale brief i priorytety różnią się od najmu długoterminowego."
+        },
+        {
+          "question": "Czy dobieracie konkretne produkty?",
+          "answer": "W bazie podajemy typy i parametry. Lista artykułów z linkami jest dodatkową usługą."
+        },
+        {
+          "question": "Czy można pracować na istniejącym wyposażeniu?",
+          "answer": "Tak. Potrzebujemy zdjęć, wymiarów i informacji, co musi zostać."
+        },
+        {
+          "question": "Czy gwarantujecie wzrost czynszu?",
+          "answer": "Nie. Projekt poprawia funkcję i prezentację, ale wynik zależy też od lokalizacji, ceny i rynku."
+        },
+        {
+          "question": "Czy obsługujecie kilka mieszkań?",
+          "answer": "Tak. Po jednym pilocie możemy przygotować model współpracy dla kolejnych obiektów."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Pierwszy obiekt",
+      "title": "Wyślij rzut i planowany budżet.",
+      "lead": "Ocenimy, czy szybka koncepcja wystarczy i które dane są potrzebne do startu.",
+      "objectLabel": "Typ zadania",
+      "objectOptions": [
+        "Nowe mieszkanie",
+        "Małe mieszkanie",
+        "Mieszkanie na wynajem"
+      ],
+      "areaLabel": "Powierzchnia w m²",
+      "stageLabel": "Na jakim etapie jesteś?",
+      "stageOptions": ["Przed remontem", "W trakcie remontu", "Przed zakupami"],
+      "nameLabel": "Imię",
+      "contactLabel": "Email lub telefon",
+      "contactHint": "Wybierz kontakt, którego rzeczywiście używasz.",
+      "fileLabel": "Rzut mieszkania (opcjonalnie)",
+      "fileHint": "PDF, JPG, PNG lub WebP, maks. 15 MB.",
+      "messageLabel": "Model najmu, termin i budżet",
+      "consent": "Zgadzam się na przetworzenie danych w celu odpowiedzi na zapytanie.",
+      "submit": "Wyślij obiekt do oceny",
+      "sending": "Wysyłanie…",
+      "successTitle": "Dziękujemy. Sprawdzimy potencjał formatu.",
+      "successText": "Wrócimy z krótką oceną w ciągu jednego dnia roboczego.",
+      "error": "Nie udało się wysłać formularza. Sprawdź pola lub spróbuj ponownie."
+    },
+    "footer": {
+      "note": "Ekspresowa koncepcja wnętrza · Warszawa i online",
+      "privacy": "Prywatność",
+      "terms": "Warunki"
+    }
+  },
+
+  {
+    "id": "uk-new-build",
+    "translationKey": "new-build",
+    "locale": "uk",
+    "segment": "new_build",
+    "slug": "novobudova",
+    "seo": {
+      "title": "Концепція інтер’єру нової квартири у Варшаві",
+      "description": "Функціональне планування, візуальний напрям і план рішень до початку ремонту за 3–5 робочих днів."
+    },
+    "nav": {
+      "method": "Як працюємо",
+      "result": "Що отримаєте",
+      "price": "Ціна",
+      "faq": "Питання"
+    },
+    "hero": {
+      "eyebrow": "Варшава · до ремонту",
+      "title": "Прийміть головні рішення до виходу ремонтної бригади.",
+      "lead": "За планом, фотографіями та розмовою про вашу сім’ю створимо функціональне планування, цілісний образ і зрозумілий порядок наступних дій.",
+      "benefits": [
+        "1 рекомендоване планування",
+        "концепція ключових зон",
+        "результат за 3–5 робочих днів"
+      ],
+      "cta": "Надіслати план квартири",
+      "secondaryCta": "Подивитися приклад методу"
+    },
+    "proof": {
+      "label": "Замість тижнів невизначеності",
+      "value": "один напрям",
+      "note": "Спочатку функція. Потім вигляд. Далі — порядок реалізації."
+    },
+    "pains": {
+      "eyebrow": "Час рішень",
+      "title": "Інтер’єр не має проєктуватися сам на будівельному майданчику.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Планування ще не визначене",
+          "text": "Незрозуміло, де стоятимуть великі меблі, як рухатиметься сім’я і скільки місця залишити для проходів."
+        },
+        {
+          "number": "02",
+          "title": "Рішення не складаються разом",
+          "text": "Освітлення, кольори, зберігання та покупки обираються окремо, без єдиного задуму."
+        },
+        {
+          "number": "03",
+          "title": "Бригаді потрібні відповіді",
+          "text": "Поспіх підвищує ризик дорогих переробок і випадкових компромісів."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Конкретний результат",
+      "title": "Документ, з яким можна рухатися далі.",
+      "items": [
+        {
+          "title": "Функціональне планування",
+          "text": "Рекомендована розстановка меблів і зон з поясненням рішень."
+        },
+        {
+          "title": "Візуальний напрям",
+          "text": "Палітра, матеріали, пропорції та атмосфера для вашої сім’ї."
+        },
+        {
+          "title": "Ключові вибори",
+          "text": "Типи меблів і світла, які найбільше впливають на простір."
+        },
+        {
+          "title": "План наступних дій",
+          "text": "Що затвердити зараз, що передати бригаді, а що відкласти."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Приклад методу",
+      "title": "Від порожнього плану до логічного сценарію дня.",
+      "text": "Це схема способу мислення, а не опублікований проєкт клієнта. Кожна концепція створюється за реальними розмірами й потребами.",
+      "before": "Вхідний план",
+      "after": "Напрям рішення",
+      "disclaimer": "Схема ілюстративна — це не робоче креслення.",
+      "notes": [
+        "зберігання біля входу",
+        "стіл також працює як робоче місце",
+        "чітка зона відпочинку"
+      ]
+    },
+    "process": {
+      "eyebrow": "Простий процес",
+      "title": "Від плану до рішення за чотири кроки.",
+      "items": [
+        {
+          "title": "Надсилаєте матеріали",
+          "text": "План, фото, короткий опис ситуації та строк ремонту."
+        },
+        {
+          "title": "Розмовляємо 30 хвилин",
+          "text": "Обговорюємо мешканців, ритм дня, зберігання і пріоритети."
+        },
+        {
+          "title": "Дизайнер формує напрям",
+          "text": "Поєднує функцію, вигляд і обмеження в одну рекомендацію."
+        },
+        {
+          "title": "Отримуєте PDF і презентацію",
+          "text": "Обговорюємо рішення та вносимо один раунд невеликих правок."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Пілотна пропозиція",
+      "title": "Design Start",
+      "priceLabel": "від",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 робочих днів",
+      "includedTitle": "У вартості",
+      "included": [
+        "аналіз потреб і матеріалів",
+        "1 рекомендоване планування",
+        "концепція головних зон",
+        "PDF 8–15 сторінок",
+        "онлайн-презентація",
+        "1 раунд невеликих правок"
+      ],
+      "excludedTitle": "Не входить",
+      "excluded": [
+        "робочі креслення",
+        "точний кошторис",
+        "нагляд за ремонтом",
+        "необмежені варіанти"
+      ],
+      "cta": "Перевірити, чи підходить формат"
+    },
+    "comparison": {
+      "title": "Експрес-концепція чи повний проєкт?",
+      "express": "Design Start",
+      "full": "Повний проєкт",
+      "rows": [
+        {
+          "label": "Функція і планування",
+          "express": "так",
+          "full": "так, з варіантами"
+        },
+        {
+          "label": "Візуальний напрям",
+          "express": "ключові зони",
+          "full": "детальні візуалізації"
+        },
+        { "label": "Робочі креслення", "express": "ні", "full": "так" },
+        { "label": "Строк", "express": "3–5 днів", "full": "кілька тижнів" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Експерт, а не генератор",
+      "title": "Технологія прискорює. Рішення приймає дизайнер.",
+      "text": "Концепція спирається на досвід проєктування житлових і комерційних просторів. AI допомагає швидше показати атмосферу, але не визначає планування, розміри чи можливість реалізації.",
+      "points": [
+        "функція перевіряється до естетики",
+        "ідеї фільтруються реальними обмеженнями",
+        "чітка рекомендація замість галереї референсів"
+      ],
+      "aiNote": "Концептуальні зображення показують напрям і не замінюють технічну документацію."
+    },
+    "faq": {
+      "eyebrow": "Без прихованих умов",
+      "title": "Поширені питання",
+      "items": [
+        {
+          "question": "Це повний дизайн-проєкт?",
+          "answer": "Ні. Це професійна концепція головних рішень без комплекту робочих креслень і авторського нагляду."
+        },
+        {
+          "question": "Чи можна передати PDF бригаді?",
+          "answer": "Так, як напрям для обговорення. Виконавцям усе одно потрібні точні виміри та технічні документи."
+        },
+        {
+          "question": "Скільки варіантів планування входить?",
+          "answer": "Одна рекомендована концепція. Альтернативний варіант можна замовити додатково."
+        },
+        {
+          "question": "Чи можливий виїзд?",
+          "answer": "Так, у Варшаві та поруч як окрема опція після уточнення адреси."
+        },
+        {
+          "question": "Наскільки точним має бути план?",
+          "answer": "Що точніші виміри, то надійніші рекомендації. Перед стартом ми перевіримо матеріали."
+        },
+        {
+          "question": "Якою мовою відбувається робота?",
+          "answer": "Процес підготовлено польською, українською та російською."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Перший крок",
+      "title": "Надішліть план. Перевіримо, чи достатньо швидкого формату.",
+      "lead": "Коротка оцінка відповідності формату безкоштовна. Безкоштовну концепцію до замовлення ми не готуємо.",
+      "objectLabel": "Тип завдання",
+      "objectOptions": [
+        "Нова квартира",
+        "Маленька квартира",
+        "Квартира для оренди"
+      ],
+      "areaLabel": "Площа, м²",
+      "stageLabel": "На якому ви етапі?",
+      "stageOptions": ["До ремонту", "Ремонт триває", "До закупівель"],
+      "nameLabel": "Ім’я",
+      "contactLabel": "Email або телефон",
+      "contactHint": "Вкажіть контакт, яким справді користуєтеся.",
+      "fileLabel": "План квартири (необов’язково)",
+      "fileHint": "PDF, JPG, PNG або WebP, до 15 MB.",
+      "messageLabel": "Що зараз найскладніше?",
+      "consent": "Погоджуюся на обробку даних для відповіді на мій запит.",
+      "submit": "Надіслати на попередню оцінку",
+      "sending": "Надсилання…",
+      "successTitle": "Дякуємо. План отримано безпечно.",
+      "successText": "Повернемося з короткою оцінкою протягом одного робочого дня.",
+      "error": "Не вдалося надіслати форму. Перевірте поля або спробуйте ще раз."
+    },
+    "footer": {
+      "note": "Експрес-концепція інтер’єру · Варшава та онлайн",
+      "privacy": "Приватність",
+      "terms": "Умови"
+    }
+  },
+  {
+    "id": "uk-small-flat",
+    "translationKey": "small-flat",
+    "locale": "uk",
+    "segment": "small_flat",
+    "slug": "mala-kvartyra",
+    "seo": {
+      "title": "Функціональний дизайн маленької квартири у Варшаві",
+      "description": "Планування, зберігання і візуальний напрям для студії або маленької квартири за 3–5 робочих днів."
+    },
+    "nav": {
+      "method": "Як працюємо",
+      "result": "Що отримаєте",
+      "price": "Ціна",
+      "faq": "Питання"
+    },
+    "hero": {
+      "eyebrow": "Маленька квартира · багато сценаріїв",
+      "title": "Вмістіть більше життя, а не більше меблів.",
+      "lead": "Організуємо сон, роботу, зберігання, відпочинок і гостей в одній логічній концепції для вашого ритму дня.",
+      "benefits": [
+        "пріоритети функцій",
+        "розумне зберігання",
+        "результат за 3–5 робочих днів"
+      ],
+      "cta": "Надіслати план квартири",
+      "secondaryCta": "Подивитися приклад методу"
+    },
+    "proof": {
+      "label": "Кожен метр має завдання",
+      "value": "без тісноти",
+      "note": "Ми не додаємо функції без кінця, а вибираємо ті, що справді потрібні щодня."
+    },
+    "pains": {
+      "eyebrow": "Менше метрів, більше конфліктів",
+      "title": "Проблема часто не в площі, а у відсутності пріоритетів.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Усе відбувається одночасно",
+          "text": "Стіл стає офісом, вітальня спальнею, а передпокій — складом без меж."
+        },
+        {
+          "number": "02",
+          "title": "Зберігання забирає простір",
+          "text": "Нові шафи не допомагають, якщо вони не відповідають конкретним речам і звичкам."
+        },
+        {
+          "number": "03",
+          "title": "Меблі блокують рух",
+          "text": "Окремо вони пасують, але разом забирають світло, проходи й відчуття простору."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Концепція під вашу площу",
+      "title": "Спочатку визначаємо, що має працювати щодня.",
+      "items": [
+        {
+          "title": "Карта сценаріїв",
+          "text": "Сон, робота, їжа, гості та зберігання за частотою використання."
+        },
+        {
+          "title": "Функціональне планування",
+          "text": "Одна рекомендована композиція зі зручними проходами."
+        },
+        {
+          "title": "Система зберігання",
+          "text": "Місце для реальних категорій речей, а не абстрактна кількість шаф."
+        },
+        {
+          "title": "Легкий образ",
+          "text": "Кольори, матеріали й пропорції без перевантаження простору."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Приклад методу",
+      "title": "Один простір може змінювати роль без хаосу.",
+      "text": "Схема показує логіку багатофункціональної зони. Це не опублікований проєкт клієнта й не робоче креслення.",
+      "before": "Функції конфліктують",
+      "after": "Функції працюють у ритмі",
+      "disclaimer": "Схема ілюстративна — потрібні реальні виміри.",
+      "notes": [
+        "цілісна стіна зберігання",
+        "складне робоче місце",
+        "зона сну не перекриває прохід"
+      ]
+    },
+    "process": {
+      "eyebrow": "Простий процес",
+      "title": "Чотири кроки до простору, що працює.",
+      "items": [
+        {
+          "title": "Надсилаєте план і фото",
+          "text": "Показуєте площу, наявні речі й обмеження."
+        },
+        {
+          "title": "Визначаємо пріоритети",
+          "text": "Відділяємо щоденні потреби від рідкісних сценаріїв."
+        },
+        {
+          "title": "Дизайнер організує сценарії",
+          "text": "Перевіряє проходи, меблі, зберігання й світло."
+        },
+        {
+          "title": "Отримуєте напрям",
+          "text": "PDF, презентація та один раунд невеликих правок."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Пілотна пропозиція",
+      "title": "Design Start",
+      "priceLabel": "від",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 робочих днів",
+      "includedTitle": "У вартості",
+      "included": [
+        "аналіз сценаріїв дня",
+        "1 рекомендоване планування",
+        "концепція зберігання",
+        "матеріали та кольори",
+        "PDF і презентація",
+        "1 раунд правок"
+      ],
+      "excludedTitle": "Не входить",
+      "excluded": [
+        "проєкт меблів на замовлення",
+        "робочі креслення",
+        "повний список покупок",
+        "необмежені варіанти"
+      ],
+      "cta": "Перевірити свою площу"
+    },
+    "comparison": {
+      "title": "Концепція чи повний проєкт?",
+      "express": "Design Start",
+      "full": "Повний проєкт",
+      "rows": [
+        { "label": "Пріоритети функцій", "express": "так", "full": "так" },
+        {
+          "label": "Планування меблів",
+          "express": "1 рекомендація",
+          "full": "варіанти й деталі"
+        },
+        {
+          "label": "Меблі на замовлення",
+          "express": "напрям",
+          "full": "документація"
+        },
+        { "label": "Строк", "express": "3–5 днів", "full": "кілька тижнів" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Дизайн — це вибір",
+      "title": "Маленький простір потребує рішень, а не трюків.",
+      "text": "Дизайнер перевіряє пропорції, рух і реальні звички. AI швидко показує атмосферу, але не розв’язує функціональні конфлікти.",
+      "points": [
+        "спочатку щоденні сценарії",
+        "меблі підбираються з урахуванням проходів",
+        "зберігання рахується за речами"
+      ],
+      "aiNote": "Концептуальні зображення не гарантують точних розмірів меблів."
+    },
+    "faq": {
+      "eyebrow": "Важливі деталі",
+      "title": "Поширені питання",
+      "items": [
+        {
+          "question": "Проєкт охоплює кімнату чи всю квартиру?",
+          "answer": "Обсяг визначимо за планом. Ціна від стосується простого об’єкта; складніші зони можуть потребувати доплати."
+        },
+        {
+          "question": "Чи буде проєкт меблів на замовлення?",
+          "answer": "У базі визначаємо функцію та габарит. Детальна документація — окремий модуль."
+        },
+        {
+          "question": "Чи треба позбутися наявних меблів?",
+          "answer": "Ні. У брифі ви вкажете речі, що залишаються, та їхні розміри."
+        },
+        {
+          "question": "Чи можна працювати повністю онлайн?",
+          "answer": "Так, якщо план, виміри й фото достатні. Виїзд у Варшаві — опція."
+        },
+        {
+          "question": "Скільки правок включено?",
+          "answer": "Один консолідований раунд невеликих змін після презентації."
+        },
+        {
+          "question": "Чи будуть візуалізації точними?",
+          "answer": "Вони показують атмосферу й матеріали. Технічні розміри беруться з плану, не з AI-зображення."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Перший крок",
+      "title": "Покажіть площу й найбільший конфлікт.",
+      "lead": "Протягом одного робочого дня оцінимо, чи підходить швидкий формат.",
+      "objectLabel": "Тип завдання",
+      "objectOptions": [
+        "Нова квартира",
+        "Маленька квартира",
+        "Квартира для оренди"
+      ],
+      "areaLabel": "Площа, м²",
+      "stageLabel": "На якому ви етапі?",
+      "stageOptions": ["До ремонту", "Ремонт триває", "До закупівель"],
+      "nameLabel": "Ім’я",
+      "contactLabel": "Email або телефон",
+      "contactHint": "Вкажіть контакт, яким справді користуєтеся.",
+      "fileLabel": "План квартири (необов’язково)",
+      "fileHint": "PDF, JPG, PNG або WebP, до 15 MB.",
+      "messageLabel": "Що має вміститися?",
+      "consent": "Погоджуюся на обробку даних для відповіді на запит.",
+      "submit": "Надіслати на оцінку",
+      "sending": "Надсилання…",
+      "successTitle": "Дякуємо. Перевіримо можливості площі.",
+      "successText": "Повернемося з короткою оцінкою протягом одного робочого дня.",
+      "error": "Не вдалося надіслати форму. Перевірте поля або спробуйте ще раз."
+    },
+    "footer": {
+      "note": "Експрес-концепція інтер’єру · Варшава та онлайн",
+      "privacy": "Приватність",
+      "terms": "Умови"
+    }
+  },
+  {
+    "id": "uk-rental",
+    "translationKey": "rental",
+    "locale": "uk",
+    "segment": "rental",
+    "slug": "kvartyra-v-orendu",
+    "seo": {
+      "title": "Концепція квартири для оренди у Варшаві",
+      "description": "Практичне планування, пріоритети бюджету і візуальний напрям квартири для оренди за 3–5 робочих днів."
+    },
+    "nav": {
+      "method": "Як працюємо",
+      "result": "Що отримаєте",
+      "price": "Ціна",
+      "faq": "Питання"
+    },
+    "hero": {
+      "eyebrow": "Квартира для оренди · Варшава",
+      "title": "Інвестуйте туди, де орендар це справді помітить.",
+      "lead": "Створимо практичну концепцію під профіль орендаря: планування, пріоритети витрат, стійкі рішення та кадри для оголошення.",
+      "benefits": [
+        "пріоритети бюджету",
+        "стійкі рішення",
+        "результат за 3–5 робочих днів"
+      ],
+      "cta": "Надіслати план квартири",
+      "secondaryCta": "Подивитися приклад методу"
+    },
+    "proof": {
+      "label": "Не декоруємо заради декору",
+      "value": "важлива віддача",
+      "note": "Кожна порада має працювати на зручність, витривалість або сприйняття пропозиції."
+    },
+    "pains": {
+      "eyebrow": "Бюджету потрібна ієрархія",
+      "title": "Не кожна витрата однаково впливає на привабливість житла.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Покупки випадкові",
+          "text": "Акції та окремі ідеї не створюють цілісного інтер’єру."
+        },
+        {
+          "number": "02",
+          "title": "Гарно, але недовговічно",
+          "text": "Матеріали не витримують зміни мешканців або їх важко замінити."
+        },
+        {
+          "number": "03",
+          "title": "Немає сильного кадру",
+          "text": "Квартира коректна, але на фотографіях нічого не зупиняє увагу."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Інвестиційна концепція",
+      "title": "Рішення впорядковані за впливом.",
+      "items": [
+        {
+          "title": "Профіль орендаря",
+          "text": "Функції під реального одержувача, а не для всіх одночасно."
+        },
+        {
+          "title": "Планування й оснащення",
+          "text": "Що необхідно, які габарити вибрати і де не переплачувати."
+        },
+        {
+          "title": "Пріоритети бюджету",
+          "text": "Обов’язково, варто зробити, можна відкласти."
+        },
+        {
+          "title": "Напрям для фото",
+          "text": "Акценти й зони, які формують перше враження."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Приклад методу",
+      "title": "Нейтральна база не означає безликий інтер’єр.",
+      "text": "Схема показує поділ на довговічні, змінні та фотографічні елементи. Це не проєкт клієнта.",
+      "before": "Витрати без ієрархії",
+      "after": "Бюджет за впливом",
+      "disclaimer": "Схема ілюстративна — ціни й наявність перевіряються окремо.",
+      "notes": ["довговічна база", "змінні акценти", "одна сильна фотозона"]
+    },
+    "process": {
+      "eyebrow": "Швидке рішення",
+      "title": "Від об’єкта до плану інвестиції.",
+      "items": [
+        {
+          "title": "Надсилаєте план і бюджет",
+          "text": "Додаєте фото, строк і модель оренди."
+        },
+        {
+          "title": "Визначаємо одержувача",
+          "text": "Уточнюємо, кому служитиме квартира і що важливо для вибору."
+        },
+        {
+          "title": "Дизайнер ставить пріоритети",
+          "text": "Поєднує планування, витривалість, вигляд і ліміт."
+        },
+        {
+          "title": "Отримуєте план дій",
+          "text": "PDF, презентація та один раунд невеликих правок."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Пілотна пропозиція",
+      "title": "Rental Start",
+      "priceLabel": "від",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 робочих днів",
+      "includedTitle": "У вартості",
+      "included": [
+        "профіль орендаря",
+        "1 рекомендоване планування",
+        "напрям матеріалів",
+        "пріоритети витрат",
+        "PDF і презентація",
+        "1 раунд правок"
+      ],
+      "excludedTitle": "Не входить",
+      "excluded": [
+        "точний кошторис",
+        "перевірка наявності",
+        "закупівлі й логістика",
+        "стейджинг на місці"
+      ],
+      "cta": "Перевірити свій об’єкт"
+    },
+    "comparison": {
+      "title": "Концепція чи повний супровід?",
+      "express": "Rental Start",
+      "full": "Повний проєкт",
+      "rows": [
+        { "label": "Планування під орендаря", "express": "так", "full": "так" },
+        {
+          "label": "Пріоритети бюджету",
+          "express": "так",
+          "full": "детальна специфікація"
+        },
+        {
+          "label": "Закупівлі й логістика",
+          "express": "ні",
+          "full": "модуль / так"
+        },
+        { "label": "Строк", "express": "3–5 днів", "full": "кілька тижнів" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Дизайн під ціль",
+      "title": "Естетика має працювати для інвестиції.",
+      "text": "Дизайнер фільтрує ідеї через витривалість, ціну заміни і зручність орендаря. AI прискорює образ, але не оцінює ризик інвестиції.",
+      "points": [
+        "вибір за впливом",
+        "витривалість і проста заміна",
+        "цілісність, помітна на фото"
+      ],
+      "aiNote": "Концепція не гарантує рівень орендної плати чи строк пошуку орендаря."
+    },
+    "faq": {
+      "eyebrow": "Обсяг без сюрпризів",
+      "title": "Поширені питання",
+      "items": [
+        {
+          "question": "Чи даєте точний бюджет?",
+          "answer": "Визначаємо пріоритети й рівень рішень. Точний кошторис і актуальні ціни — окремий модуль."
+        },
+        {
+          "question": "Формат підходить для подобової оренди?",
+          "answer": "Так, але бриф і пріоритети відрізняються від довгострокової оренди."
+        },
+        {
+          "question": "Чи підбираєте конкретні товари?",
+          "answer": "У базі даємо типи й параметри. Список із посиланнями — додаткова послуга."
+        },
+        {
+          "question": "Чи можна залишити наявні меблі?",
+          "answer": "Так. Потрібні фото, розміри та перелік речей, що залишаються."
+        },
+        {
+          "question": "Чи гарантуєте підвищення оренди?",
+          "answer": "Ні. Результат залежить також від адреси, ціни й ринку."
+        },
+        {
+          "question": "Чи працюєте з кількома квартирами?",
+          "answer": "Так. Після одного пілота можемо погодити модель для наступних об’єктів."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Перший об’єкт",
+      "title": "Надішліть план і запланований бюджет.",
+      "lead": "Оцінимо, чи достатньо швидкої концепції і які дані потрібні для старту.",
+      "objectLabel": "Тип завдання",
+      "objectOptions": [
+        "Нова квартира",
+        "Маленька квартира",
+        "Квартира для оренди"
+      ],
+      "areaLabel": "Площа, м²",
+      "stageLabel": "На якому ви етапі?",
+      "stageOptions": ["До ремонту", "Ремонт триває", "До закупівель"],
+      "nameLabel": "Ім’я",
+      "contactLabel": "Email або телефон",
+      "contactHint": "Вкажіть контакт, яким справді користуєтеся.",
+      "fileLabel": "План квартири (необов’язково)",
+      "fileHint": "PDF, JPG, PNG або WebP, до 15 MB.",
+      "messageLabel": "Модель оренди, строк і бюджет",
+      "consent": "Погоджуюся на обробку даних для відповіді на запит.",
+      "submit": "Надіслати об’єкт на оцінку",
+      "sending": "Надсилання…",
+      "successTitle": "Дякуємо. Перевіримо потенціал формату.",
+      "successText": "Повернемося з короткою оцінкою протягом одного робочого дня.",
+      "error": "Не вдалося надіслати форму. Перевірте поля або спробуйте ще раз."
+    },
+    "footer": {
+      "note": "Експрес-концепція інтер’єру · Варшава та онлайн",
+      "privacy": "Приватність",
+      "terms": "Умови"
+    }
+  },
+
+  {
+    "id": "ru-new-build",
+    "translationKey": "new-build",
+    "locale": "ru",
+    "segment": "new_build",
+    "slug": "novostroyka",
+    "seo": {
+      "title": "Концепция интерьера новой квартиры в Варшаве",
+      "description": "Функциональная планировка, визуальное направление и план решений до начала ремонта за 3–5 рабочих дней."
+    },
+    "nav": {
+      "method": "Как работаем",
+      "result": "Что получите",
+      "price": "Цена",
+      "faq": "Вопросы"
+    },
+    "hero": {
+      "eyebrow": "Варшава · до ремонта",
+      "title": "Примите главные решения до выхода ремонтной бригады.",
+      "lead": "По плану, фотографиям и разговору о вашей семье подготовим функциональную планировку, цельный образ и понятный порядок дальнейших действий.",
+      "benefits": [
+        "1 рекомендуемая планировка",
+        "концепция ключевых зон",
+        "результат за 3–5 рабочих дней"
+      ],
+      "cta": "Отправить план квартиры",
+      "secondaryCta": "Посмотреть пример метода"
+    },
+    "proof": {
+      "label": "Вместо недель неопределённости",
+      "value": "одно направление",
+      "note": "Сначала функция. Затем внешний вид. Потом — порядок реализации."
+    },
+    "pains": {
+      "eyebrow": "Время решений",
+      "title": "Интерьер не должен проектироваться сам на стройке.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Планировка всё ещё открыта",
+          "text": "Непонятно, где будет крупная мебель, как движется семья и сколько места оставить для проходов."
+        },
+        {
+          "number": "02",
+          "title": "Решения не складываются",
+          "text": "Свет, цвета, хранение и покупки выбираются отдельно, без единой логики."
+        },
+        {
+          "number": "03",
+          "title": "Бригаде нужны ответы",
+          "text": "Решения в спешке повышают риск дорогих переделок и случайных компромиссов."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Конкретный результат",
+      "title": "Документ, с которым можно двигаться дальше.",
+      "items": [
+        {
+          "title": "Функциональная планировка",
+          "text": "Рекомендуемая расстановка мебели и зон с объяснением решений."
+        },
+        {
+          "title": "Визуальное направление",
+          "text": "Палитра, материалы, пропорции и атмосфера под вашу семью."
+        },
+        {
+          "title": "Ключевые выборы",
+          "text": "Типы мебели и света, которые сильнее всего влияют на пространство."
+        },
+        {
+          "title": "План дальнейших действий",
+          "text": "Что утвердить сейчас, что передать бригаде, а что отложить."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Пример метода",
+      "title": "От пустого плана к логичному сценарию дня.",
+      "text": "Это схема способа мышления, а не опубликованный проект клиента. Каждая концепция создаётся по реальным размерам и потребностям.",
+      "before": "Исходный план",
+      "after": "Направление решения",
+      "disclaimer": "Схема иллюстративная — это не рабочий чертёж.",
+      "notes": [
+        "хранение у входа",
+        "стол работает и как рабочее место",
+        "ясная зона отдыха"
+      ]
+    },
+    "process": {
+      "eyebrow": "Простой процесс",
+      "title": "От плана до решения за четыре шага.",
+      "items": [
+        {
+          "title": "Вы отправляете материалы",
+          "text": "План, фото, короткое описание ситуации и срок ремонта."
+        },
+        {
+          "title": "Разговариваем 30 минут",
+          "text": "Обсуждаем жильцов, ритм дня, хранение и приоритеты."
+        },
+        {
+          "title": "Дизайнер формирует направление",
+          "text": "Соединяет функцию, внешний вид и ограничения в одну рекомендацию."
+        },
+        {
+          "title": "Получаете PDF и презентацию",
+          "text": "Обсуждаем решения и вносим один раунд небольших правок."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Пилотное предложение",
+      "title": "Design Start",
+      "priceLabel": "от",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 рабочих дней",
+      "includedTitle": "В стоимости",
+      "included": [
+        "анализ задач и материалов",
+        "1 рекомендуемая планировка",
+        "концепция основных зон",
+        "PDF 8–15 страниц",
+        "онлайн-презентация",
+        "1 раунд небольших правок"
+      ],
+      "excludedTitle": "Не входит",
+      "excluded": [
+        "рабочие чертежи",
+        "точная смета",
+        "надзор за ремонтом",
+        "неограниченные варианты"
+      ],
+      "cta": "Проверить, подходит ли формат"
+    },
+    "comparison": {
+      "title": "Экспресс-концепция или полный проект?",
+      "express": "Design Start",
+      "full": "Полный проект",
+      "rows": [
+        {
+          "label": "Функция и планировка",
+          "express": "да",
+          "full": "да, с вариантами"
+        },
+        {
+          "label": "Визуальное направление",
+          "express": "ключевые зоны",
+          "full": "детальные визуализации"
+        },
+        { "label": "Рабочие чертежи", "express": "нет", "full": "да" },
+        { "label": "Срок", "express": "3–5 дней", "full": "несколько недель" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Эксперт, а не генератор",
+      "title": "Технология ускоряет. Решения принимает дизайнер.",
+      "text": "Концепция опирается на опыт проектирования жилых и коммерческих пространств. ИИ помогает быстрее показать атмосферу, но не определяет планировку, размеры и реализуемость.",
+      "points": [
+        "функция проверяется до эстетики",
+        "идеи фильтруются реальными ограничениями",
+        "одна ясная рекомендация вместо галереи референсов"
+      ],
+      "aiNote": "Концептуальные изображения показывают направление и не заменяют техническую документацию."
+    },
+    "faq": {
+      "eyebrow": "Без скрытых условий",
+      "title": "Частые вопросы",
+      "items": [
+        {
+          "question": "Это полный дизайн-проект?",
+          "answer": "Нет. Это профессиональная концепция главных решений без комплекта рабочих чертежей и авторского надзора."
+        },
+        {
+          "question": "Можно передать PDF бригаде?",
+          "answer": "Да, как направление для обсуждения. Исполнителям всё равно нужны точные замеры и технические документы."
+        },
+        {
+          "question": "Сколько вариантов планировки входит?",
+          "answer": "Одна рекомендуемая концепция. Альтернативный вариант можно заказать отдельно."
+        },
+        {
+          "question": "Возможен ли выезд?",
+          "answer": "Да, в Варшаве и рядом как отдельная опция после уточнения адреса."
+        },
+        {
+          "question": "Насколько точным должен быть план?",
+          "answer": "Чем точнее размеры, тем надёжнее рекомендации. До старта мы проверим материалы."
+        },
+        {
+          "question": "На каком языке проходит работа?",
+          "answer": "Процесс подготовлен на польском, украинском и русском."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Первый шаг",
+      "title": "Отправьте план. Проверим, достаточно ли быстрого формата.",
+      "lead": "Короткая оценка соответствия формату бесплатна. Бесплатную концепцию до заказа мы не готовим.",
+      "objectLabel": "Тип задачи",
+      "objectOptions": [
+        "Новая квартира",
+        "Маленькая квартира",
+        "Квартира под аренду"
+      ],
+      "areaLabel": "Площадь, м²",
+      "stageLabel": "На каком вы этапе?",
+      "stageOptions": ["До ремонта", "Ремонт идёт", "До закупок"],
+      "nameLabel": "Имя",
+      "contactLabel": "Email или телефон",
+      "contactHint": "Укажите контакт, которым действительно пользуетесь.",
+      "fileLabel": "План квартиры (необязательно)",
+      "fileHint": "PDF, JPG, PNG или WebP, до 15 MB.",
+      "messageLabel": "Что сейчас сложнее всего?",
+      "consent": "Соглашаюсь на обработку данных для ответа на мой запрос.",
+      "submit": "Отправить на предварительную оценку",
+      "sending": "Отправка…",
+      "successTitle": "Спасибо. План получен безопасно.",
+      "successText": "Вернёмся с короткой оценкой в течение одного рабочего дня.",
+      "error": "Не удалось отправить форму. Проверьте поля или попробуйте снова."
+    },
+    "footer": {
+      "note": "Экспресс-концепция интерьера · Варшава и онлайн",
+      "privacy": "Приватность",
+      "terms": "Условия"
+    }
+  },
+  {
+    "id": "ru-small-flat",
+    "translationKey": "small-flat",
+    "locale": "ru",
+    "segment": "small_flat",
+    "slug": "malenkaya-kvartira",
+    "seo": {
+      "title": "Функциональный дизайн маленькой квартиры в Варшаве",
+      "description": "Планировка, хранение и визуальное направление для студии или маленькой квартиры за 3–5 рабочих дней."
+    },
+    "nav": {
+      "method": "Как работаем",
+      "result": "Что получите",
+      "price": "Цена",
+      "faq": "Вопросы"
+    },
+    "hero": {
+      "eyebrow": "Маленькая квартира · много сценариев",
+      "title": "Вместите больше жизни, а не больше мебели.",
+      "lead": "Организуем сон, работу, хранение, отдых и гостей в одной логичной концепции под ваш ритм дня.",
+      "benefits": [
+        "приоритеты функций",
+        "умное хранение",
+        "результат за 3–5 рабочих дней"
+      ],
+      "cta": "Отправить план квартиры",
+      "secondaryCta": "Посмотреть пример метода"
+    },
+    "proof": {
+      "label": "У каждого метра есть задача",
+      "value": "без тесноты",
+      "note": "Мы не добавляем функции бесконечно, а выбираем те, что действительно нужны каждый день."
+    },
+    "pains": {
+      "eyebrow": "Меньше метров, больше конфликтов",
+      "title": "Проблема часто не в площади, а в отсутствии приоритетов.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Всё происходит одновременно",
+          "text": "Стол становится офисом, гостиная спальней, а прихожая складом без границ."
+        },
+        {
+          "number": "02",
+          "title": "Хранение съедает пространство",
+          "text": "Новые шкафы не помогают, если они не соответствуют конкретным вещам и привычкам."
+        },
+        {
+          "number": "03",
+          "title": "Мебель блокирует движение",
+          "text": "По отдельности всё подходит, но вместе забирает свет, проходы и ощущение воздуха."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Концепция под вашу площадь",
+      "title": "Сначала определяем, что должно работать каждый день.",
+      "items": [
+        {
+          "title": "Карта сценариев",
+          "text": "Сон, работа, еда, гости и хранение по частоте использования."
+        },
+        {
+          "title": "Функциональная планировка",
+          "text": "Одна рекомендуемая композиция с удобными проходами."
+        },
+        {
+          "title": "Система хранения",
+          "text": "Место для реальных категорий вещей, а не абстрактное число шкафов."
+        },
+        {
+          "title": "Лёгкий образ",
+          "text": "Цвета, материалы и пропорции без перегрузки пространства."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Пример метода",
+      "title": "Одно пространство может менять роль без хаоса.",
+      "text": "Схема показывает логику многофункциональной зоны. Это не опубликованный проект клиента и не рабочий чертёж.",
+      "before": "Функции конфликтуют",
+      "after": "Функции работают в ритме",
+      "disclaimer": "Схема иллюстративная — нужны реальные размеры.",
+      "notes": [
+        "единая стена хранения",
+        "складное рабочее место",
+        "зона сна не перекрывает проход"
+      ]
+    },
+    "process": {
+      "eyebrow": "Простой процесс",
+      "title": "Четыре шага к пространству, которое работает.",
+      "items": [
+        {
+          "title": "Вы отправляете план и фото",
+          "text": "Показываете площадь, существующие вещи и ограничения."
+        },
+        {
+          "title": "Определяем приоритеты",
+          "text": "Отделяем ежедневные потребности от редких сценариев."
+        },
+        {
+          "title": "Дизайнер организует сценарии",
+          "text": "Проверяет проходы, мебель, хранение и свет."
+        },
+        {
+          "title": "Получаете направление",
+          "text": "PDF, презентация и один раунд небольших правок."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Пилотное предложение",
+      "title": "Design Start",
+      "priceLabel": "от",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 рабочих дней",
+      "includedTitle": "В стоимости",
+      "included": [
+        "анализ сценариев дня",
+        "1 рекомендуемая планировка",
+        "концепция хранения",
+        "материалы и цвета",
+        "PDF и презентация",
+        "1 раунд правок"
+      ],
+      "excludedTitle": "Не входит",
+      "excluded": [
+        "проект заказной мебели",
+        "рабочие чертежи",
+        "полный список покупок",
+        "неограниченные варианты"
+      ],
+      "cta": "Проверить свою площадь"
+    },
+    "comparison": {
+      "title": "Концепция или полный проект?",
+      "express": "Design Start",
+      "full": "Полный проект",
+      "rows": [
+        { "label": "Приоритеты функций", "express": "да", "full": "да" },
+        {
+          "label": "Планировка мебели",
+          "express": "1 рекомендация",
+          "full": "варианты и детали"
+        },
+        {
+          "label": "Заказная мебель",
+          "express": "направление",
+          "full": "документация"
+        },
+        { "label": "Срок", "express": "3–5 дней", "full": "несколько недель" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Дизайн — это выбор",
+      "title": "Маленькому пространству нужны решения, а не трюки.",
+      "text": "Дизайнер проверяет пропорции, движение и реальные привычки. ИИ быстро показывает атмосферу, но не решает функциональные конфликты.",
+      "points": [
+        "сначала ежедневные сценарии",
+        "мебель подбирается с учётом проходов",
+        "хранение считается по вещам"
+      ],
+      "aiNote": "Концептуальные изображения не гарантируют точные размеры мебели."
+    },
+    "faq": {
+      "eyebrow": "Важные детали",
+      "title": "Частые вопросы",
+      "items": [
+        {
+          "question": "Проект охватывает комнату или всю квартиру?",
+          "answer": "Объём определим по плану. Цена от относится к простому объекту; сложные зоны могут потребовать доплаты."
+        },
+        {
+          "question": "Будет ли проект заказной мебели?",
+          "answer": "В базе определяем функцию и габарит. Детальная документация — отдельный модуль."
+        },
+        {
+          "question": "Нужно выбрасывать существующую мебель?",
+          "answer": "Нет. В брифе вы укажете вещи, которые остаются, и их размеры."
+        },
+        {
+          "question": "Можно работать полностью онлайн?",
+          "answer": "Да, если план, размеры и фото достаточны. Выезд в Варшаве — опция."
+        },
+        {
+          "question": "Сколько правок включено?",
+          "answer": "Один консолидированный раунд небольших изменений после презентации."
+        },
+        {
+          "question": "Визуализации будут точными?",
+          "answer": "Они показывают атмосферу и материалы. Технические размеры берутся из плана, а не из ИИ-изображения."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Первый шаг",
+      "title": "Покажите площадь и главный конфликт.",
+      "lead": "В течение одного рабочего дня оценим, подходит ли быстрый формат.",
+      "objectLabel": "Тип задачи",
+      "objectOptions": [
+        "Новая квартира",
+        "Маленькая квартира",
+        "Квартира под аренду"
+      ],
+      "areaLabel": "Площадь, м²",
+      "stageLabel": "На каком вы этапе?",
+      "stageOptions": ["До ремонта", "Ремонт идёт", "До закупок"],
+      "nameLabel": "Имя",
+      "contactLabel": "Email или телефон",
+      "contactHint": "Укажите контакт, которым действительно пользуетесь.",
+      "fileLabel": "План квартиры (необязательно)",
+      "fileHint": "PDF, JPG, PNG или WebP, до 15 MB.",
+      "messageLabel": "Что должно поместиться?",
+      "consent": "Соглашаюсь на обработку данных для ответа на запрос.",
+      "submit": "Отправить на оценку",
+      "sending": "Отправка…",
+      "successTitle": "Спасибо. Проверим возможности площади.",
+      "successText": "Вернёмся с короткой оценкой в течение одного рабочего дня.",
+      "error": "Не удалось отправить форму. Проверьте поля или попробуйте снова."
+    },
+    "footer": {
+      "note": "Экспресс-концепция интерьера · Варшава и онлайн",
+      "privacy": "Приватность",
+      "terms": "Условия"
+    }
+  },
+  {
+    "id": "ru-rental",
+    "translationKey": "rental",
+    "locale": "ru",
+    "segment": "rental",
+    "slug": "kvartira-v-arendu",
+    "seo": {
+      "title": "Концепция квартиры под аренду в Варшаве",
+      "description": "Практичная планировка, приоритеты бюджета и визуальное направление квартиры под аренду за 3–5 рабочих дней."
+    },
+    "nav": {
+      "method": "Как работаем",
+      "result": "Что получите",
+      "price": "Цена",
+      "faq": "Вопросы"
+    },
+    "hero": {
+      "eyebrow": "Квартира под аренду · Варшава",
+      "title": "Инвестируйте туда, где арендатор это действительно заметит.",
+      "lead": "Подготовим практичную концепцию под профиль арендатора: планировка, приоритеты расходов, устойчивые решения и кадры для объявления.",
+      "benefits": [
+        "приоритеты бюджета",
+        "устойчивые решения",
+        "результат за 3–5 рабочих дней"
+      ],
+      "cta": "Отправить план квартиры",
+      "secondaryCta": "Посмотреть пример метода"
+    },
+    "proof": {
+      "label": "Не декорируем ради декора",
+      "value": "важна отдача",
+      "note": "Каждая рекомендация должна работать на удобство, долговечность или восприятие предложения."
+    },
+    "pains": {
+      "eyebrow": "Бюджету нужна иерархия",
+      "title": "Не каждая трата одинаково влияет на привлекательность жилья.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Покупки случайны",
+          "text": "Акции и отдельные идеи не создают цельного интерьера."
+        },
+        {
+          "number": "02",
+          "title": "Красиво, но недолговечно",
+          "text": "Материалы не выдерживают смены жильцов или их сложно заменить."
+        },
+        {
+          "number": "03",
+          "title": "Нет сильного кадра",
+          "text": "Квартира корректна, но на фотографиях ничто не удерживает внимание."
+        }
+      ]
+    },
+    "deliverables": {
+      "eyebrow": "Инвестиционная концепция",
+      "title": "Решения расставлены по влиянию.",
+      "items": [
+        {
+          "title": "Профиль арендатора",
+          "text": "Функции под реального получателя, а не для всех сразу."
+        },
+        {
+          "title": "Планировка и оснащение",
+          "text": "Что обязательно, какие габариты выбрать и где не переплачивать."
+        },
+        {
+          "title": "Приоритеты бюджета",
+          "text": "Обязательно, стоит сделать, можно отложить."
+        },
+        {
+          "title": "Направление для фото",
+          "text": "Акценты и зоны, которые формируют первое впечатление."
+        }
+      ]
+    },
+    "example": {
+      "eyebrow": "Пример метода",
+      "title": "Нейтральная база не означает безликий интерьер.",
+      "text": "Схема показывает разделение на долговечные, заменяемые и фотографические элементы. Это не проект клиента.",
+      "before": "Расходы без иерархии",
+      "after": "Бюджет по влиянию",
+      "disclaimer": "Схема иллюстративная — цены и наличие проверяются отдельно.",
+      "notes": [
+        "долговечная база",
+        "заменяемые акценты",
+        "одна сильная фотозона"
+      ]
+    },
+    "process": {
+      "eyebrow": "Быстрое решение",
+      "title": "От объекта к плану инвестиций.",
+      "items": [
+        {
+          "title": "Вы отправляете план и бюджет",
+          "text": "Добавляете фото, срок и модель аренды."
+        },
+        {
+          "title": "Определяем получателя",
+          "text": "Уточняем, кому служит квартира и что влияет на выбор."
+        },
+        {
+          "title": "Дизайнер расставляет приоритеты",
+          "text": "Соединяет планировку, долговечность, вид и лимит."
+        },
+        {
+          "title": "Получаете план действий",
+          "text": "PDF, презентация и один раунд небольших правок."
+        }
+      ]
+    },
+    "package": {
+      "eyebrow": "Пилотное предложение",
+      "title": "Rental Start",
+      "priceLabel": "от",
+      "price": 1490,
+      "currency": "zł",
+      "duration": "3–5 рабочих дней",
+      "includedTitle": "В стоимости",
+      "included": [
+        "профиль арендатора",
+        "1 рекомендуемая планировка",
+        "направление материалов",
+        "приоритеты расходов",
+        "PDF и презентация",
+        "1 раунд правок"
+      ],
+      "excludedTitle": "Не входит",
+      "excluded": [
+        "точная смета",
+        "проверка наличия",
+        "закупки и логистика",
+        "стейджинг на месте"
+      ],
+      "cta": "Проверить свой объект"
+    },
+    "comparison": {
+      "title": "Концепция или полное сопровождение?",
+      "express": "Rental Start",
+      "full": "Полный проект",
+      "rows": [
+        { "label": "Планировка под арендатора", "express": "да", "full": "да" },
+        {
+          "label": "Приоритеты бюджета",
+          "express": "да",
+          "full": "детальная спецификация"
+        },
+        {
+          "label": "Закупки и логистика",
+          "express": "нет",
+          "full": "модуль / да"
+        },
+        { "label": "Срок", "express": "3–5 дней", "full": "несколько недель" }
+      ]
+    },
+    "expert": {
+      "eyebrow": "Дизайн под цель",
+      "title": "Эстетика должна работать для инвестиции.",
+      "text": "Дизайнер фильтрует идеи через долговечность, стоимость замены и удобство арендатора. ИИ ускоряет образ, но не оценивает риск инвестиции.",
+      "points": [
+        "выбор по влиянию",
+        "долговечность и простая замена",
+        "цельность, заметная на фото"
+      ],
+      "aiNote": "Концепция не гарантирует уровень арендной платы или срок поиска арендатора."
+    },
+    "faq": {
+      "eyebrow": "Объём без сюрпризов",
+      "title": "Частые вопросы",
+      "items": [
+        {
+          "question": "Вы даёте точный бюджет?",
+          "answer": "Определяем приоритеты и уровень решений. Точная смета и актуальные цены — отдельный модуль."
+        },
+        {
+          "question": "Формат подходит для посуточной аренды?",
+          "answer": "Да, но бриф и приоритеты отличаются от долгосрочной аренды."
+        },
+        {
+          "question": "Вы подбираете конкретные товары?",
+          "answer": "В базе даём типы и параметры. Список со ссылками — дополнительная услуга."
+        },
+        {
+          "question": "Можно оставить существующую мебель?",
+          "answer": "Да. Нужны фото, размеры и список вещей, которые остаются."
+        },
+        {
+          "question": "Вы гарантируете повышение аренды?",
+          "answer": "Нет. Результат зависит также от адреса, цены и рынка."
+        },
+        {
+          "question": "Вы работаете с несколькими квартирами?",
+          "answer": "Да. После одного пилота можем согласовать модель для следующих объектов."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Первый объект",
+      "title": "Отправьте план и предполагаемый бюджет.",
+      "lead": "Оценим, достаточно ли быстрой концепции и какие данные нужны для старта.",
+      "objectLabel": "Тип задачи",
+      "objectOptions": [
+        "Новая квартира",
+        "Маленькая квартира",
+        "Квартира под аренду"
+      ],
+      "areaLabel": "Площадь, м²",
+      "stageLabel": "На каком вы этапе?",
+      "stageOptions": ["До ремонта", "Ремонт идёт", "До закупок"],
+      "nameLabel": "Имя",
+      "contactLabel": "Email или телефон",
+      "contactHint": "Укажите контакт, которым действительно пользуетесь.",
+      "fileLabel": "План квартиры (необязательно)",
+      "fileHint": "PDF, JPG, PNG или WebP, до 15 MB.",
+      "messageLabel": "Модель аренды, срок и бюджет",
+      "consent": "Соглашаюсь на обработку данных для ответа на запрос.",
+      "submit": "Отправить объект на оценку",
+      "sending": "Отправка…",
+      "successTitle": "Спасибо. Проверим потенциал формата.",
+      "successText": "Вернёмся с короткой оценкой в течение одного рабочего дня.",
+      "error": "Не удалось отправить форму. Проверьте поля или попробуйте снова."
+    },
+    "footer": {
+      "note": "Экспресс-концепция интерьера · Варшава и онлайн",
+      "privacy": "Приватность",
+      "terms": "Условия"
+    }
+  }
+]

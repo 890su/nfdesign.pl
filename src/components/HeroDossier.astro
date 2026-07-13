@@ -1,0 +1,86 @@
+---
+interface Props {
+  segment: "new_build" | "small_flat" | "rental";
+  benefits: string[];
+  before: string;
+  after: string;
+}
+
+const { segment, benefits, before, after } = Astro.props;
+const sheetCode =
+  segment === "new_build"
+    ? "NB-01"
+    : segment === "small_flat"
+      ? "SF-02"
+      : "RT-03";
+---
+
+<figure class="hero-dossier" aria-labelledby={`dossier-${sheetCode}`}>
+  <figcaption class="dossier-head" id={`dossier-${sheetCode}`}>
+    <span class="utility">N/D · {sheetCode}</span>
+    <span class="dossier-status"><i aria-hidden="true"></i> 42.8 m²</span>
+  </figcaption>
+
+  <div class="dossier-canvas">
+    <svg viewBox="0 0 760 580" role="img" aria-label={`${before} — ${after}`}>
+      <g class="plan-grid" aria-hidden="true">
+        <path
+          d="M0 72h760M0 144h760M0 216h760M0 288h760M0 360h760M0 432h760M0 504h760"
+        ></path>
+        <path
+          d="M76 0v580M152 0v580M228 0v580M304 0v580M380 0v580M456 0v580M532 0v580M608 0v580M684 0v580"
+        ></path>
+      </g>
+
+      <g class="plan-shell">
+        <path d="M98 72h548v408H98z"></path>
+        <path
+          d="M98 242h206V72M304 242h176V72M480 242h166M480 242v238M304 242v238M98 360h126v120M480 354h166"
+        ></path>
+        <path
+          class="door"
+          d="M304 170a72 72 0 0 0-72 72M480 170a72 72 0 0 1 72 72M304 400a80 80 0 0 0-80 80"
+        ></path>
+      </g>
+
+      <g class="plan-furniture">
+        <rect x="124" y="102" width="142" height="72"></rect>
+        <rect x="336" y="103" width="108" height="43"></rect>
+        <rect x="512" y="101" width="101" height="95"></rect>
+        <rect x="337" y="294" width="112" height="64"></rect>
+        <rect x="342" y="393" width="114" height="27"></rect>
+        <ellipse cx="566" cy="414" rx="47" ry="28"></ellipse>
+      </g>
+
+      <g class="plan-redlines">
+        <path d="M178 348V286H116"></path>
+        <path d="M390 285v-48h98"></path>
+        <path d="M566 373V270h82"></path>
+        <circle cx="178" cy="348" r="7"></circle>
+        <circle cx="390" cy="285" r="7"></circle>
+        <circle cx="566" cy="373" r="7"></circle>
+      </g>
+
+      <g class="plan-coordinates" aria-hidden="true">
+        <text x="105" y="281">A</text>
+        <text x="493" y="230">B</text>
+        <text x="652" y="263">C</text>
+        <path d="M98 524h548M98 515v18M646 515v18"></path>
+        <text x="372" y="552" text-anchor="middle">8 420 mm</text>
+      </g>
+    </svg>
+
+    <div class="dossier-stamp" aria-hidden="true">DECISION<br />SET</div>
+  </div>
+
+  <ol class="dossier-notes">
+    {
+      benefits.slice(0, 3).map((item, index) => (
+        <li>
+          <span>{String.fromCharCode(65 + index)}</span>
+          {item}
+        </li>
+      ))
+    }
+  </ol>
+</figure>

@@ -1,0 +1,72 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+export const prerender = true;
+const copy = {
+  pl: {
+    privacy: {
+      title: "Prywatność",
+      body: "Ta wersja opisuje zakres techniczny MVP. Przed uruchomieniem reklam należy uzupełnić dane administratora, podstawy prawne, okresy przechowywania i prawa użytkownika w dokumencie sprawdzonym dla rynku polskiego.",
+    },
+    terms: {
+      title: "Warunki usługi",
+      body: "Ekspresowa koncepcja nie jest kompletem rysunków wykonawczych. Finalne warunki, dane wykonawcy, płatności, korekty i odpowiedzialność wymagają zatwierdzonego regulaminu przed sprzedażą.",
+    },
+  },
+  uk: {
+    privacy: {
+      title: "Приватність",
+      body: "Ця версія описує технічний обсяг MVP. До запуску реклами потрібно додати дані адміністратора, правові підстави, строки зберігання та права користувача у документі, перевіреному для польського ринку.",
+    },
+    terms: {
+      title: "Умови послуги",
+      body: "Експрес-концепція не є комплектом робочих креслень. Дані виконавця, оплата, правки й відповідальність мають бути затверджені до продажу.",
+    },
+  },
+  ru: {
+    privacy: {
+      title: "Приватность",
+      body: "Эта версия описывает технический объём MVP. До запуска рекламы необходимо добавить данные администратора, правовые основания, сроки хранения и права пользователя в документе, проверенном для польского рынка.",
+    },
+    terms: {
+      title: "Условия услуги",
+      body: "Экспресс-концепция не является комплектом рабочих чертежей. Данные исполнителя, оплата, правки и ответственность должны быть утверждены до продаж.",
+    },
+  },
+};
+export function getStaticPaths() {
+  return ["pl", "uk", "ru"].flatMap((locale) =>
+    ["privacy", "terms"].map((legal) => ({ params: { locale, legal } })),
+  );
+}
+const locale = Astro.params.locale as "pl" | "uk" | "ru";
+const legal = Astro.params.legal as "privacy" | "terms";
+const item = copy[locale][legal];
+const alt = ["pl", "uk", "ru"].map((lang) => ({
+  locale: lang,
+  label: lang.toUpperCase(),
+  href: `/${lang}/${legal}/`,
+}));
+const nav = { method: "—", result: "—", price: "—", faq: "—" };
+const footer = {
+  note: "Need for Design · Warsaw",
+  privacy: copy[locale].privacy.title,
+  terms: copy[locale].terms.title,
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${item.title} · Need for Design`}
+  description={item.body}
+  alternates={alt}
+  nav={nav}
+  footer={footer}
+>
+  <article class="legal-page">
+    <div class="container legal-copy">
+      <p class="eyebrow">MVP / 2026-07-13</p><h1 class="display">
+        {item.title}
+      </h1><p class="legal-notice">{item.body}</p>
+    </div>
+  </article>
+</BaseLayout>

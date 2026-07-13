@@ -1,0 +1,33 @@
+---
+const locale = Astro.props.locale as "pl" | "uk" | "ru";
+const copy = {
+  pl: {
+    text: "Używamy niezbędnych plików do działania formularza. Analitykę uruchomimy tylko po Twojej zgodzie.",
+    accept: "Zgadzam się",
+    reject: "Tylko niezbędne",
+  },
+  uk: {
+    text: "Необхідні файли забезпечують роботу форми. Аналітику ввімкнемо лише після вашої згоди.",
+    accept: "Погоджуюся",
+    reject: "Лише необхідні",
+  },
+  ru: {
+    text: "Необходимые файлы обеспечивают работу формы. Аналитику включим только после вашего согласия.",
+    accept: "Согласен",
+    reject: "Только необходимые",
+  },
+}[locale];
+---
+
+<aside
+  class="cookie-banner"
+  data-cookie-banner
+  hidden
+  aria-label="Cookie settings"
+>
+  <p>{copy.text}</p>
+  <div class="cookie-actions">
+    <button type="button" data-consent="accepted">{copy.accept}</button>
+    <button type="button" data-consent="necessary">{copy.reject}</button>
+  </div>
+</aside>

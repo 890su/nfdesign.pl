@@ -1,0 +1,261 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FloorPlan from "@/components/FloorPlan.astro";
+import HeroDossier from "@/components/HeroDossier.astro";
+import LeadForm from "@/components/LeadForm.astro";
+
+type Data = CollectionEntry<"segments">["data"];
+const { data } = Astro.props as { data: Data };
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-message">
+      <p class="eyebrow">{data.hero.eyebrow}</p>
+      <h1 class="display">{data.hero.title}</h1>
+      <p>{data.hero.lead}</p>
+      <div class="button-row">
+        <a class="button" href="#contact"
+          >{data.hero.cta}<span aria-hidden="true">→</span></a
+        ><a class="button button-ghost" href="#example"
+          >{data.hero.secondaryCta}</a
+        >
+      </div>
+    </div>
+    <HeroDossier
+      segment={data.segment}
+      benefits={data.hero.benefits}
+      before={data.example.before}
+      after={data.example.after}
+    />
+  </div>
+</section>
+
+<aside class="proof-strip">
+  <div class="container proof-grid">
+    <span class="proof-index" aria-hidden="true">01 / N·D</span>
+    <div class="proof-message">
+      <p class="proof-equation">
+        <span>{data.proof.label}</span><i aria-hidden="true">→</i><strong
+          >{data.proof.value}</strong
+        >
+      </p>
+      <p class="proof-note">{data.proof.note}</p>
+    </div>
+  </div>
+</aside>
+
+<section class="section" aria-labelledby="pain-title">
+  <div class="container">
+    <div class="split-heading">
+      <p class="eyebrow">{data.pains.eyebrow}</p><h2
+        id="pain-title"
+        class="display section-title"
+      >
+        {data.pains.title}
+      </h2>
+    </div>
+    <div class="pain-grid">
+      {
+        data.pains.items.map((item) => (
+          <article class="pain-item">
+            <>
+              <span class="pain-number">{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section
+  class="section section-dark"
+  id="result"
+  aria-labelledby="result-title"
+>
+  <div class="container deliverables-layout">
+    <div>
+      <p class="eyebrow">{data.deliverables.eyebrow}</p><h2
+        id="result-title"
+        class="display section-title"
+      >
+        {data.deliverables.title}
+      </h2>
+    </div>
+    <div class="deliverables-list">
+      {
+        data.deliverables.items.map((item) => (
+          <article class="deliverable">
+            <div>
+              <>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section" id="example" aria-labelledby="example-title">
+  <div class="container example-grid">
+    <div>
+      <p class="eyebrow">{data.example.eyebrow}</p><h2
+        id="example-title"
+        class="display section-title"
+      >
+        {data.example.title}
+      </h2><p class="lede">{data.example.text}</p><ul class="plan-notes">
+        {data.example.notes.map((note) => <li>{note}</li>)}
+      </ul>
+    </div>
+    <FloorPlan
+      segment={data.segment}
+      before={data.example.before}
+      after={data.example.after}
+      disclaimer={data.example.disclaimer}
+    />
+  </div>
+</section>
+
+<section
+  class="section section-petrol"
+  id="method"
+  aria-labelledby="method-title"
+>
+  <div class="container">
+    <p class="eyebrow">{data.process.eyebrow}</p><h2
+      id="method-title"
+      class="display section-title"
+    >
+      {data.process.title}
+    </h2><div class="process-grid">
+      {
+        data.process.items.map((item, index) => (
+          <article class="process-item">
+            <>
+              <span class="process-step">0{index + 1}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section" id="price" aria-labelledby="price-title">
+  <div class="container package-layout">
+    <div class="price-box">
+      <p class="eyebrow">{data.package.eyebrow}</p><h2
+        id="price-title"
+        class="display section-title"
+      >
+        {data.package.title}
+      </h2><div class="price">
+        <span>{data.package.priceLabel}</span><strong
+          >{data.package.price}</strong
+        ><span>{data.package.currency}</span>
+      </div><p class="muted">{data.package.duration}</p><a
+        class="button"
+        href="#contact">{data.package.cta}<span aria-hidden="true">→</span></a
+      >
+    </div>
+    <div>
+      <div class="package-columns">
+        <div class="package-list">
+          <h3>{data.package.includedTitle}</h3><ul>
+            {data.package.included.map((item) => <li>{item}</li>)}
+          </ul>
+        </div><div class="package-list">
+          <h3>{data.package.excludedTitle}</h3><ul>
+            {data.package.excluded.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+      <table class="comparison">
+        <caption>{data.comparison.title}</caption><thead
+          ><tr
+            ><th></th><th>{data.comparison.express}</th><th
+              >{data.comparison.full}</th
+            ></tr
+          ></thead
+        ><tbody
+          >{
+            data.comparison.rows.map((row) => (
+              <tr>
+                <>
+                  <th scope="row">{row.label}</th>
+                  <td>{row.express}</td>
+                  <td>{row.full}</td>
+                </>
+              </tr>
+            ))
+          }</tbody
+        >
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" aria-labelledby="expert-title">
+  <div class="container expert-grid">
+    <div>
+      <p class="eyebrow">{data.expert.eyebrow}</p><h2
+        id="expert-title"
+        class="display section-title"
+      >
+        {data.expert.title}
+      </h2><p class="lede">{data.expert.text}</p><ul class="expert-points">
+        {data.expert.points.map((point) => <li>{point}</li>)}
+      </ul><p class="ai-note">{data.expert.aiNote}</p>
+    </div><div class="expert-board" aria-hidden="true">
+      <span class="expert-board-code">N/D · HUMAN REVIEW</span>
+      <strong>N/D</strong>
+      <div class="expert-board-lines"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container faq-layout">
+    <div>
+      <p class="eyebrow">{data.faq.eyebrow}</p><h2
+        id="faq-title"
+        class="display section-title"
+      >
+        {data.faq.title}
+      </h2>
+    </div><div class="faq-list">
+      {
+        data.faq.items.map((item) => (
+          <details class="faq-item">
+            <>
+              <summary>{item.question}</summary>
+              <div class="faq-answer">{item.answer}</div>
+            </>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section form-section" id="contact" aria-labelledby="form-title">
+  <div class="container form-layout">
+    <div>
+      <p class="eyebrow">{data.form.eyebrow}</p><h2
+        id="form-title"
+        class="display section-title"
+      >
+        {data.form.title}
+      </h2><p class="lede">{data.form.lead}</p>
+    </div><LeadForm data={data} />
+  </div>
+</section>

@@ -1,0 +1,214 @@
+---
+import StrategyLayout from "@/layouts/StrategyLayout.astro";
+import { strategyDocuments } from "@/data/strategy-documents";
+
+export const prerender = true;
+---
+
+<StrategyLayout
+  title="Strategy · Need for Design"
+  description="Рабочая карта стратегии и запуска MVP Need for Design."
+>
+  <section class="strategy-hero">
+    <div class="strategy-shell strategy-hero__grid">
+      <div>
+        <p class="strategy-kicker">Need for Design · internal</p>
+        <h1>Стратегия<br /><em>в одном месте.</em></h1>
+      </div>
+      <div class="strategy-hero__note">
+        <p>Рабочая карта для чтения, обсуждения и принятия решений по MVP.</p>
+        <a href="/pl/nowe-mieszkanie/"
+          >Перейти к лендингу <span aria-hidden="true">→</span></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="strategy-documents" aria-labelledby="documents-title">
+    <div class="strategy-shell">
+      <div class="strategy-section-heading">
+        <p class="strategy-kicker">05 документов</p>
+        <h2 id="documents-title">Навигация по материалам</h2>
+      </div>
+      <ol class="strategy-document-list">
+        {
+          strategyDocuments.map((document, index) => (
+            <li>
+              <a href={`/strategy/${document.slug}/`}>
+                <span class="strategy-document-list__number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>
+                  <strong>{document.title}</strong>
+                  <small>{document.subtitle}</small>
+                </span>
+                <span class="strategy-document-list__arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+              <code>{document.source}</code>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+</StrategyLayout>
+
+<style>
+  .strategy-hero {
+    padding: clamp(5rem, 10vw, 10rem) 0 clamp(4rem, 8vw, 7rem);
+    border-bottom: 1px solid var(--strategy-ink);
+    background: linear-gradient(
+        90deg,
+        transparent calc(100% - 1px),
+        rgba(21, 69, 216, 0.11) 1px
+      )
+      0 0 / min(8.333vw, 8rem) 100%;
+  }
+  .strategy-hero__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(2rem, 8vw, 9rem);
+    align-items: end;
+  }
+  .strategy-kicker {
+    margin: 0 0 1.35rem;
+    color: var(--strategy-red);
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  h1,
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 530;
+    letter-spacing: -0.06em;
+    line-height: 0.98;
+  }
+  h1 {
+    font-size: clamp(3rem, 7vw, 7rem);
+  }
+  h1 em {
+    color: var(--strategy-blue);
+    font-style: normal;
+  }
+  .strategy-hero__note {
+    max-width: 30rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--strategy-red);
+  }
+  .strategy-hero__note p {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.5;
+  }
+  .strategy-hero__note a {
+    color: var(--strategy-blue);
+    font-weight: 750;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+  }
+  .strategy-documents {
+    padding: clamp(4rem, 8vw, 8rem) 0;
+  }
+  .strategy-section-heading {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+  }
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 4rem);
+  }
+  .strategy-document-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid var(--strategy-ink);
+  }
+  .strategy-document-list li {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    border-bottom: 1px solid var(--strategy-line);
+  }
+  .strategy-document-list a {
+    display: grid;
+    grid-template-columns: 4.25rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    min-height: 8.5rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .strategy-document-list a:hover strong {
+    color: var(--strategy-blue);
+  }
+  .strategy-document-list a:hover .strategy-document-list__arrow {
+    background: var(--strategy-blue);
+    color: white;
+  }
+  .strategy-document-list__number,
+  .strategy-document-list code {
+    color: rgba(17, 21, 22, 0.58);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  .strategy-document-list strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.55rem);
+    font-weight: 550;
+    letter-spacing: -0.045em;
+    transition: color 0.16s ease;
+  }
+  .strategy-document-list small {
+    display: block;
+    max-width: 54ch;
+    margin-top: 0.55rem;
+    color: rgba(17, 21, 22, 0.7);
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+  .strategy-document-list__arrow {
+    display: grid;
+    place-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: 1px solid var(--strategy-ink);
+    transition:
+      background 0.16s ease,
+      color 0.16s ease;
+  }
+  .strategy-document-list code {
+    align-self: end;
+    margin-bottom: 0.8rem;
+  }
+  @media (max-width: 720px) {
+    .strategy-hero__grid,
+    .strategy-section-heading {
+      grid-template-columns: 1fr;
+    }
+    .strategy-section-heading {
+      gap: 0.35rem;
+    }
+    .strategy-document-list li {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .strategy-document-list a {
+      grid-template-columns: 2.8rem minmax(0, 1fr) auto;
+      min-height: 7.5rem;
+      gap: 0.8rem;
+    }
+    .strategy-document-list code {
+      margin: -1rem 0 1rem 3.6rem;
+    }
+  }
+</style>

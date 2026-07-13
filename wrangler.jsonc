@@ -1,0 +1,34 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "need-for-design-mvp",
+  "account_id": "5354e054d53157bf5b02ce5119d08948",
+  "compatibility_date": "2026-07-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "pattern": "nfdesign.pl",
+      "custom_domain": true,
+    },
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist",
+  },
+  "observability": { "enabled": true },
+  "vars": {
+    "ENVIRONMENT": "production",
+  },
+  "d1_databases": [
+    {
+      "binding": "LEADS_DB",
+      "database_name": "need-for-design-leads",
+      "database_id": "635a05de-493b-4fab-acc5-3b858a45333b",
+    },
+  ],
+  "r2_buckets": [
+    {
+      "binding": "PRIVATE_UPLOADS",
+      "bucket_name": "need-for-design-private-uploads",
+    },
+  ],
+}
