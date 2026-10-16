@@ -6,9 +6,90 @@ const selectedIndex =
   data.segment === "new_build" ? 0 : data.segment === "small_flat" ? 1 : 2;
 const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 const uid = `${data.locale}-${data.segment}`;
+const copy = {
+  pl: {
+    required: "wymagane",
+    optional: "opcjonalnie",
+    extra: "Szczegóły projektu",
+    plan: "Rzut mieszkania",
+    summary: "Sprawdź zaznaczone pola.",
+    missing: "Wypełnij to pole.",
+    consent: "Zaznacz zgodę, aby wysłać zgłoszenie.",
+    name: "Podaj imię: od 2 do 80 znaków.",
+    contact: "Podaj kontakt: od 5 do 160 znaków.",
+    area: "Podaj pełną liczbę od 10 do 500 m².",
+    invalid: "Sprawdź wartość tego pola.",
+    message: "Wiadomość może mieć maksymalnie 1500 znaków.",
+    fileSize: "Plik jest za duży. Maksymalny rozmiar to 15 MB.",
+    fileType: "Wybierz plik PDF, JPG, PNG lub WebP.",
+    verification:
+      "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
+    file: "Nie udało się zweryfikować pliku. Wybierz poprawny PDF, JPG, PNG lub WebP do 15 MB.",
+    duplicate: "To zgłoszenie zostało już przyjęte. Nie wysyłaj go ponownie.",
+    upload:
+      "Zgłoszenie zapisano, ale plik nie dotarł. Nie wysyłaj zgłoszenia ponownie; plan możesz dosłać podczas kontaktu.",
+  },
+  uk: {
+    required: "обов’язково",
+    optional: "необов’язково",
+    extra: "Деталі проєкту",
+    plan: "План квартири",
+    summary: "Перевірте позначені поля.",
+    missing: "Заповніть це поле.",
+    consent: "Надайте згоду, щоб надіслати заявку.",
+    name: "Вкажіть ім’я: від 2 до 80 символів.",
+    contact: "Вкажіть контакт: від 5 до 160 символів.",
+    area: "Вкажіть ціле число від 10 до 500 м².",
+    invalid: "Перевірте значення цього поля.",
+    message: "Повідомлення може містити щонайбільше 1500 символів.",
+    fileSize: "Файл завеликий. Максимальний розмір — 15 MB.",
+    fileType: "Виберіть файл PDF, JPG, PNG або WebP.",
+    verification: "Перевірка безпеки не вдалася. Спробуйте ще раз.",
+    file: "Не вдалося перевірити файл. Виберіть коректний PDF, JPG, PNG або WebP до 15 MB.",
+    duplicate: "Цю заявку вже прийнято. Не надсилайте її повторно.",
+    upload:
+      "Заявку збережено, але файл не надійшов. Не надсилайте заявку повторно; план можна дослати під час спілкування.",
+  },
+  ru: {
+    required: "обязательно",
+    optional: "необязательно",
+    extra: "Детали проекта",
+    plan: "План квартиры",
+    summary: "Проверьте отмеченные поля.",
+    missing: "Заполните это поле.",
+    consent: "Дайте согласие, чтобы отправить заявку.",
+    name: "Укажите имя: от 2 до 80 символов.",
+    contact: "Укажите контакт: от 5 до 160 символов.",
+    area: "Укажите целое число от 10 до 500 м².",
+    invalid: "Проверьте значение этого поля.",
+    message: "Сообщение может содержать не более 1500 символов.",
+    fileSize: "Файл слишком большой. Максимальный размер — 15 MB.",
+    fileType: "Выберите файл PDF, JPG, PNG или WebP.",
+    verification: "Проверка безопасности не удалась. Попробуйте ещё раз.",
+    file: "Не удалось проверить файл. Выберите корректный PDF, JPG, PNG или WebP до 15 MB.",
+    duplicate: "Эта заявка уже принята. Не отправляйте её повторно.",
+    upload:
+      "Заявка сохранена, но файл не получен. Не отправляйте заявку повторно; план можно дослать при общении.",
+  },
+}[data.locale];
 ---
 
-<form class="lead-form" data-lead-form enctype="multipart/form-data" novalidate>
+<form
+  class="lead-form"
+  data-lead-form
+  data-form-copy={JSON.stringify(copy)}
+  enctype="multipart/form-data"
+  novalidate
+>
+  <div
+    class="form-error-summary"
+    data-error-summary
+    role="alert"
+    aria-atomic="true"
+    tabindex="-1"
+    hidden
+  >
+  </div>
   <input type="hidden" name="locale" value={data.locale} />
   <input type="hidden" name="segment" value={data.segment} />
   <input type="hidden" name="idempotencyKey" value="" data-idempotency />
@@ -22,52 +103,10 @@ const uid = `${data.locale}-${data.segment}`;
   />
   <div class="form-grid">
     <div class="field">
-      <label for={`object-${uid}`}>{data.form.objectLabel}</label>
-      <select id={`object-${uid}`} name="objectType" required>
-        {
-          data.form.objectOptions.map((option, index) => (
-            <option
-              value={["new_build", "small_flat", "rental"][index]}
-              selected={index === selectedIndex}
-            >
-              {option}
-            </option>
-          ))
-        }
-      </select>
-    </div>
-    <div class="field">
-      <label for={`area-${uid}`}>{data.form.areaLabel}</label>
-      <input
-        id={`area-${uid}`}
-        name="area"
-        type="number"
-        inputmode="numeric"
-        min="10"
-        max="500"
-        placeholder="42"
-      />
-    </div>
-    <div class="field field-wide">
-      <label for={`stage-${uid}`}>{data.form.stageLabel}</label>
-      <select id={`stage-${uid}`} name="projectStage" required>
-        {
-          data.form.stageOptions.map((option, index) => (
-            <option
-              value={
-                ["before_renovation", "during_renovation", "before_purchase"][
-                  index
-                ]
-              }
-            >
-              {option}
-            </option>
-          ))
-        }
-      </select>
-    </div>
-    <div class="field">
-      <label for={`name-${uid}`}>{data.form.nameLabel}</label>
+      <label for={`name-${uid}`}
+        >{data.form.nameLabel}
+        <span class="field-requirement">({copy.required})</span></label
+      >
       <input
         id={`name-${uid}`}
         name="name"
@@ -75,11 +114,20 @@ const uid = `${data.locale}-${data.segment}`;
         autocomplete="name"
         minlength="2"
         maxlength="80"
+        aria-describedby={`name-error-${uid}`}
         required
       />
+      <small
+        class="field-error"
+        id={`name-error-${uid}`}
+        data-field-error="name"
+        hidden></small>
     </div>
     <div class="field">
-      <label for={`contact-${uid}`}>{data.form.contactLabel}</label>
+      <label for={`contact-${uid}`}
+        >{data.form.contactLabel}
+        <span class="field-requirement">({copy.required})</span></label
+      >
       <input
         id={`contact-${uid}`}
         name="contact"
@@ -87,34 +135,167 @@ const uid = `${data.locale}-${data.segment}`;
         autocomplete="email"
         minlength="5"
         maxlength="160"
-        aria-describedby={`contact-hint-${uid}`}
+        aria-describedby={`contact-hint-${uid} contact-error-${uid}`}
         required
       />
       <small id={`contact-hint-${uid}`}>{data.form.contactHint}</small>
+      <small
+        class="field-error"
+        id={`contact-error-${uid}`}
+        data-field-error="contact"
+        hidden></small>
     </div>
     <div class="field field-wide">
-      <label for={`file-${uid}`}>{data.form.fileLabel}</label>
+      <label for={`file-${uid}`}
+        >{copy.plan}
+        <span class="field-requirement">({copy.optional})</span></label
+      >
       <input
         id={`file-${uid}`}
         name="plan"
         type="file"
         accept="application/pdf,image/jpeg,image/png,image/webp"
-        aria-describedby={`file-hint-${uid}`}
+        aria-describedby={`file-hint-${uid} plan-error-${uid}`}
       />
       <small id={`file-hint-${uid}`}>{data.form.fileHint}</small>
-    </div>
-    <div class="field field-wide">
-      <label for={`message-${uid}`}>{data.form.messageLabel}</label>
-      <textarea id={`message-${uid}`} name="message" maxlength="1500"
-      ></textarea>
+      <small
+        class="field-error"
+        id={`plan-error-${uid}`}
+        data-field-error="plan"
+        hidden></small>
     </div>
   </div>
-  {siteKey && <div class="cf-turnstile" data-sitekey={siteKey} />}
-  <label class="checkbox"
-    ><input type="checkbox" name="consent" value="yes" required /><span
-      >{data.form.consent}</span
+  <details class="form-extra">
+    <summary>{copy.extra}</summary>
+    <div class="form-grid">
+      <div class="field">
+        <label for={`object-${uid}`}
+          >{data.form.objectLabel}
+          <span class="field-requirement">({copy.required})</span></label
+        >
+        <select
+          id={`object-${uid}`}
+          name="objectType"
+          aria-describedby={`objectType-error-${uid}`}
+          required
+        >
+          {
+            data.form.objectOptions.map((option, index) => (
+              <option
+                value={["new_build", "small_flat", "rental"][index]}
+                selected={index === selectedIndex}
+              >
+                {option}
+              </option>
+            ))
+          }
+        </select>
+        <small
+          class="field-error"
+          id={`objectType-error-${uid}`}
+          data-field-error="objectType"
+          hidden></small>
+      </div>
+      <div class="field">
+        <label for={`area-${uid}`}
+          >{data.form.areaLabel}
+          <span class="field-requirement">({copy.optional})</span></label
+        >
+        <input
+          id={`area-${uid}`}
+          name="area"
+          type="number"
+          inputmode="numeric"
+          min="10"
+          max="500"
+          step="1"
+          aria-describedby={`area-error-${uid}`}
+          placeholder="42"
+        />
+        <small
+          class="field-error"
+          id={`area-error-${uid}`}
+          data-field-error="area"
+          hidden></small>
+      </div>
+      <div class="field field-wide">
+        <label for={`stage-${uid}`}
+          >{data.form.stageLabel}
+          <span class="field-requirement">({copy.required})</span></label
+        >
+        <select
+          id={`stage-${uid}`}
+          name="projectStage"
+          aria-describedby={`projectStage-error-${uid}`}
+          required
+        >
+          {
+            data.form.stageOptions.map((option, index) => (
+              <option
+                selected={index === 0}
+                value={
+                  ["before_renovation", "during_renovation", "before_purchase"][
+                    index
+                  ]
+                }
+              >
+                {option}
+              </option>
+            ))
+          }
+        </select>
+        <small
+          class="field-error"
+          id={`projectStage-error-${uid}`}
+          data-field-error="projectStage"
+          hidden></small>
+      </div>
+      <div class="field field-wide">
+        <label for={`message-${uid}`}
+          >{data.form.messageLabel}
+          <span class="field-requirement">({copy.optional})</span></label
+        >
+        <textarea
+          id={`message-${uid}`}
+          name="message"
+          maxlength="1500"
+          aria-describedby={`message-error-${uid}`}></textarea>
+        <small
+          class="field-error"
+          id={`message-error-${uid}`}
+          data-field-error="message"
+          hidden></small>
+      </div>
+    </div>
+  </details>
+  {
+    siteKey && (
+      <div
+        id={`captcha-${uid}`}
+        class="cf-turnstile"
+        data-sitekey={siteKey}
+        data-language={data.locale}
+      />
+    )
+  }
+  <label class="checkbox" for={`consent-${uid}`}
+    ><input
+      id={`consent-${uid}`}
+      type="checkbox"
+      name="consent"
+      value="yes"
+      aria-describedby={`consent-error-${uid}`}
+      required
+    /><span
+      >{data.form.consent}
+      <span class="field-requirement">({copy.required})</span></span
     ></label
   >
+  <small
+    class="field-error"
+    id={`consent-error-${uid}`}
+    data-field-error="consent"
+    hidden></small>
   <button
     class="button"
     type="submit"

@@ -1,86 +1,82 @@
 ---
+import { studioCopy } from "@/content/studio";
 interface Props {
-  segment: "new_build" | "small_flat" | "rental";
-  benefits: string[];
-  before: string;
-  after: string;
+  locale: "pl" | "uk" | "ru";
+  notes: string[];
 }
-
-const { segment, benefits, before, after } = Astro.props;
-const sheetCode =
-  segment === "new_build"
-    ? "NB-01"
-    : segment === "small_flat"
-      ? "SF-02"
-      : "RT-03";
+const { locale, notes } = Astro.props;
+const copy = studioCopy[locale];
 ---
 
-<figure class="hero-dossier" aria-labelledby={`dossier-${sheetCode}`}>
-  <figcaption class="dossier-head" id={`dossier-${sheetCode}`}>
-    <span class="utility">N/D · {sheetCode}</span>
-    <span class="dossier-status"><i aria-hidden="true"></i> 42.8 m²</span>
+<figure class="hero-dossier">
+  <figcaption class="dossier-head">
+    <span>{copy.demo}</span><span class="sheet-symbol" aria-hidden="true"
+    ></span>
   </figcaption>
-
   <div class="dossier-canvas">
-    <svg viewBox="0 0 760 580" role="img" aria-label={`${before} — ${after}`}>
-      <g class="plan-grid" aria-hidden="true">
+    <svg viewBox="0 0 640 440" role="img" aria-label={copy.sheet}>
+      <g fill="#f8f7f2" stroke="#34443e" stroke-width="5">
+        <path d="M62 45H578V365H62Z"></path>
         <path
-          d="M0 72h760M0 144h760M0 216h760M0 288h760M0 360h760M0 432h760M0 504h760"
-        ></path>
-        <path
-          d="M76 0v580M152 0v580M228 0v580M304 0v580M380 0v580M456 0v580M532 0v580M608 0v580M684 0v580"
+          d="M62 210H262V45M262 210H426V45M426 210H578M426 210V365M262 210V365M62 294H151V365"
         ></path>
       </g>
-
-      <g class="plan-shell">
-        <path d="M98 72h548v408H98z"></path>
+      <g fill="none" stroke="#8b958b" stroke-width="1.5">
         <path
-          d="M98 242h206V72M304 242h176V72M480 242h166M480 242v238M304 242v238M98 360h126v120M480 354h166"
-        ></path>
-        <path
-          class="door"
-          d="M304 170a72 72 0 0 0-72 72M480 170a72 72 0 0 1 72 72M304 400a80 80 0 0 0-80 80"
-        ></path>
+          d="M262 150A60 60 0 0 0 202 210M426 150A60 60 0 0 1 486 210M262 303A62 62 0 0 0 200 365"
+          stroke-dasharray="5 4"></path>
+        <path d="M62 394H578M62 388V400M578 388V400"></path>
       </g>
-
-      <g class="plan-furniture">
-        <rect x="124" y="102" width="142" height="72"></rect>
-        <rect x="336" y="103" width="108" height="43"></rect>
-        <rect x="512" y="101" width="101" height="95"></rect>
-        <rect x="337" y="294" width="112" height="64"></rect>
-        <rect x="342" y="393" width="114" height="27"></rect>
-        <ellipse cx="566" cy="414" rx="47" ry="28"></ellipse>
+      <g fill="#d4cfbf" stroke="#6e7b6f" stroke-width="1.5">
+        <rect x="87" y="72" width="144" height="76" rx="3"></rect>
+        <path d="M92 78H155V101H92ZM164 78H225V101H164Z" fill="#f7f4ed"></path>
+        <rect x="285" y="70" width="115" height="35"></rect>
+        <rect x="290" y="139" width="50" height="35"></rect>
+        <rect x="450" y="70" width="102" height="98" rx="4" fill="#e9e6dc"
+        ></rect>
+        <rect x="83" y="311" width="46" height="38"></rect>
+        <rect x="287" y="245" width="112" height="55" rx="5"></rect>
+        <rect x="294" y="322" width="100" height="20" rx="2" fill="#b9c6b9"
+        ></rect>
+        <ellipse cx="503" cy="315" rx="46" ry="25" fill="#c0a88a"></ellipse>
+        <path d="M472 278H491M515 278H534M472 352H491M515 352H534"></path>
       </g>
-
-      <g class="plan-redlines">
-        <path d="M178 348V286H116"></path>
-        <path d="M390 285v-48h98"></path>
-        <path d="M566 373V270h82"></path>
-        <circle cx="178" cy="348" r="7"></circle>
-        <circle cx="390" cy="285" r="7"></circle>
-        <circle cx="566" cy="373" r="7"></circle>
+      <g fill="none" stroke="#a3543c" stroke-width="1.6">
+        <path d="M106 308V267H78M346 243V190H380M505 285V241H550"></path>
       </g>
-
-      <g class="plan-coordinates" aria-hidden="true">
-        <text x="105" y="281">A</text>
-        <text x="493" y="230">B</text>
-        <text x="652" y="263">C</text>
-        <path d="M98 524h548M98 515v18M646 515v18"></path>
-        <text x="372" y="552" text-anchor="middle">8 420 mm</text>
+      <g
+        fill="#a3543c"
+        font-family="sans-serif"
+        font-size="14"
+        font-weight="600"
+      >
+        <text x="74" y="256">A</text><text x="384" y="195">B</text><text
+          x="554"
+          y="246">C</text
+        >
       </g>
+      <g fill="#164d45"
+        ><circle cx="106" cy="307" r="4"></circle><circle
+          cx="346"
+          cy="243"
+          r="4"></circle><circle cx="505" cy="285" r="4"></circle></g
+      >
     </svg>
-
-    <div class="dossier-stamp" aria-hidden="true">DECISION<br />SET</div>
   </div>
-
   <ol class="dossier-notes">
     {
-      benefits.slice(0, 3).map((item, index) => (
+      notes.map((note, index) => (
         <li>
           <span>{String.fromCharCode(65 + index)}</span>
-          {item}
+          {note}
         </li>
       ))
     }
   </ol>
+  <div class="dossier-materials" aria-label={copy.palette}>
+    <span class="material-chip material-chip--paper"></span><span
+      class="material-chip material-chip--wood"></span><span
+      class="material-chip material-chip--green"></span><p>{copy.palette}</p>
+  </div>
+  <p class="dossier-disclaimer">{copy.demoNote}</p>
 </figure>

@@ -3,69 +3,141 @@ import type { CollectionEntry } from "astro:content";
 import FloorPlan from "@/components/FloorPlan.astro";
 import HeroDossier from "@/components/HeroDossier.astro";
 import LeadForm from "@/components/LeadForm.astro";
-
+import { studioCopy } from "@/content/studio";
 type Data = CollectionEntry<"segments">["data"];
 const { data } = Astro.props as { data: Data };
+const copy = studioCopy[data.locale];
+const isMain = data.locale === "pl" && data.segment === "new_build";
+const title = isMain
+  ? "Zaplanuj mieszkanie, zanim zaczniesz remont."
+  : data.hero.title;
+const lead = isMain
+  ? "Układ funkcjonalny, kierunek wnętrza i plan dalszych decyzji. Opracowane przez projektanta w 3–5 dni roboczych."
+  : data.hero.lead;
 ---
 
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-message">
-      <h1 class="display">{data.hero.title}</h1>
+      <h1 class="display">{title}</h1>
       <p class="hero-context">{data.hero.eyebrow}</p>
-      <p>{data.hero.lead}</p>
+      <p class="hero-lead">{lead}</p>
+      <ul class="hero-facts" aria-label={copy.facts}>
+        <li>
+          {data.package.priceLabel}
+          <strong>{data.package.price} {data.package.currency}</strong>
+        </li>
+        <li>{data.package.duration}</li>
+        <li>{data.package.included.at(-1)}</li>
+      </ul>
       <div class="button-row">
         <a class="button" href="#contact"
-          >{data.hero.cta}<span aria-hidden="true">→</span></a
-        ><a class="button button-ghost" href="#example"
-          >{data.hero.secondaryCta}</a
+          >{copy.cta}<span class="button-arrow" aria-hidden="true"></span></a
         >
+        <a class="text-link" href="#example">{copy.example}</a>
       </div>
-      <p class="hero-facts" aria-label="Najważniejsze informacje o usłudze">
-        <span
-          >{data.package.priceLabel}
-          {data.package.price}
-          {data.package.currency}</span
-        >
-        <span>{data.package.duration}</span>
-        <span>{data.package.included.at(-1)}</span>
-      </p>
+      <p class="hero-reassurance">{copy.intro}</p>
+      <p class="hero-optional">{copy.optional}</p>
     </div>
-    <HeroDossier
-      segment={data.segment}
-      benefits={data.hero.benefits}
-      before={data.example.before}
-      after={data.example.after}
-    />
+    <HeroDossier locale={data.locale} notes={data.example.notes} />
   </div>
 </section>
 
-<aside class="proof-strip">
-  <div class="container proof-grid">
-    <div class="proof-message">
-      <p class="proof-equation">
-        <span>{data.proof.label}</span><i aria-hidden="true">→</i><strong
-          >{data.proof.value}</strong
-        >
-      </p>
-      <p class="proof-note">{data.proof.note}</p>
+<section
+  class="section example-section"
+  id="example"
+  aria-labelledby="example-title"
+>
+  <div class="container">
+    <div class="section-heading example-heading">
+      <h2 id="example-title" class="display">{copy.resultTitle}</h2>
+      <div>
+        <p>{data.example.text}</p><p class="demo-label">{copy.demoNote}</p>
+      </div>
+    </div>
+    <div class="example-grid">
+      <FloorPlan
+        segment={data.segment}
+        before={data.example.before}
+        after={data.example.after}
+        disclaimer={data.example.disclaimer}
+      />
+      <div class="example-notes">
+        <h3>{data.example.title}</h3>
+        <ol class="decision-list">
+          {
+            data.example.notes.map((note, index) => (
+              <li>
+                <>
+                  <span aria-hidden="true">
+                    {String.fromCharCode(65 + index)}
+                  </span>
+                  <p>{note}</p>
+                </>
+              </li>
+            ))
+          }
+        </ol>
+        <div class="material-direction">
+          <h3>{copy.palette}</h3><div class="material-swatches">
+            {
+              copy.colors.map((color, index) => (
+                <div>
+                  <>
+                    <span class={`swatch swatch--${index}`} />
+                    <p>{color}</p>
+                  </>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</aside>
+</section>
 
-<section class="section" aria-labelledby="pain-title">
+<section class="section review-section" aria-labelledby="review-title">
+  <div class="container review-layout">
+    <div>
+      <h2 id="review-title" class="display">{copy.reviewTitle}</h2><p
+        class="lede"
+      >
+        {copy.reviewText}
+      </p><p class="disclaimer">{data.expert.aiNote}</p>
+    </div>
+    <div class="review-checks">
+      {
+        copy.checks.map((check) => (
+          <article>
+            <>
+              <span class="check-mark" aria-hidden="true" />
+              <div>
+                <>
+                  <h3>{check.title}</h3>
+                  <p>{check.text}</p>
+                </>
+              </div>
+            </>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section suitability-section" aria-labelledby="fit-title">
   <div class="container">
-    <div class="split-heading split-heading--single">
-      <h2 id="pain-title" class="display section-title">
+    <div class="section-heading">
+      <h2 id="fit-title" class="display">{copy.suitability}</h2><p>
         {data.pains.title}
-      </h2>
+      </p>
     </div>
     <div class="pain-grid">
       {
         data.pains.items.map((item) => (
           <article class="pain-item">
             <>
-              <span class="pain-number">{item.number}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </>
@@ -77,65 +149,23 @@ const { data } = Astro.props as { data: Data };
 </section>
 
 <section
-  class="section section-dark"
+  class="section result-section"
   id="result"
   aria-labelledby="result-title"
 >
   <div class="container deliverables-layout">
     <div>
-      <h2 id="result-title" class="display section-title">
-        {data.deliverables.title}
-      </h2>
+      <h2 id="result-title" class="display">{data.deliverables.title}</h2><p
+        class="result-format"
+      >
+        PDF · {data.package.duration}
+      </p>
     </div>
     <div class="deliverables-list">
       {
         data.deliverables.items.map((item) => (
           <article class="deliverable">
-            <div>
-              <>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </>
-            </div>
-          </article>
-        ))
-      }
-    </div>
-  </div>
-</section>
-
-<section class="section" id="example" aria-labelledby="example-title">
-  <div class="container example-grid">
-    <div>
-      <h2 id="example-title" class="display section-title">
-        {data.example.title}
-      </h2><p class="lede">{data.example.text}</p><ul class="plan-notes">
-        {data.example.notes.map((note) => <li>{note}</li>)}
-      </ul>
-    </div>
-    <FloorPlan
-      segment={data.segment}
-      before={data.example.before}
-      after={data.example.after}
-      disclaimer={data.example.disclaimer}
-    />
-  </div>
-</section>
-
-<section
-  class="section section-petrol"
-  id="method"
-  aria-labelledby="method-title"
->
-  <div class="container">
-    <h2 id="method-title" class="display section-title">
-      {data.process.title}
-    </h2><div class="process-grid">
-      {
-        data.process.items.map((item, index) => (
-          <article class="process-item">
             <>
-              <span class="process-step">0{index + 1}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </>
@@ -149,16 +179,17 @@ const { data } = Astro.props as { data: Data };
 <section class="section" id="price" aria-labelledby="price-title">
   <div class="container package-layout">
     <div class="price-box">
-      <h2 id="price-title" class="display section-title">
-        {data.package.title}
-      </h2><div class="price">
+      <h2 id="price-title" class="display">{data.package.title}</h2><div
+        class="price"
+      >
         <span>{data.package.priceLabel}</span><strong
           >{data.package.price}</strong
         ><span>{data.package.currency}</span>
-      </div><p class="muted">{data.package.duration}</p><a
+      </div><p>{data.package.duration} · {data.package.included.at(-1)}</p><a
         class="button"
-        href="#contact">{data.package.cta}<span aria-hidden="true">→</span></a
-      >
+        href="#contact"
+        >{copy.cta}<span class="button-arrow" aria-hidden="true"></span></a
+      ><p class="package-note">{copy.packageNote}</p>
     </div>
     <div>
       <div class="package-columns">
@@ -172,54 +203,61 @@ const { data } = Astro.props as { data: Data };
           </ul>
         </div>
       </div>
-      <table class="comparison">
-        <caption>{data.comparison.title}</caption><thead
-          ><tr
-            ><th></th><th>{data.comparison.express}</th><th
-              >{data.comparison.full}</th
-            ></tr
-          ></thead
-        ><tbody
-          >{
-            data.comparison.rows.map((row) => (
-              <tr>
-                <>
-                  <th scope="row">{row.label}</th>
-                  <td>{row.express}</td>
-                  <td>{row.full}</td>
-                </>
-              </tr>
-            ))
-          }</tbody
-        >
-      </table>
+      <div class="comparison-scroll">
+        <table class="comparison">
+          <caption>{data.comparison.title}</caption><thead
+            ><tr
+              ><th scope="col"><span class="sr-only">{copy.plan}</span></th><th
+                scope="col">{data.comparison.express}</th
+              ><th scope="col">{data.comparison.full}</th></tr
+            ></thead
+          ><tbody
+            >{
+              data.comparison.rows.map((row) => (
+                <tr>
+                  <>
+                    <th scope="row">{row.label}</th>
+                    <td>{row.express}</td>
+                    <td>{row.full}</td>
+                  </>
+                </tr>
+              ))
+            }</tbody
+          >
+        </table>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" aria-labelledby="expert-title">
-  <div class="container expert-grid">
-    <div>
-      <h2 id="expert-title" class="display section-title">
-        {data.expert.title}
-      </h2><p class="lede">{data.expert.text}</p><ul class="expert-points">
-        {data.expert.points.map((point) => <li>{point}</li>)}
-      </ul><p class="ai-note">{data.expert.aiNote}</p>
-    </div><div class="expert-board" aria-hidden="true">
-      <span class="expert-board-code">N/D · HUMAN REVIEW</span>
-      <strong>N/D</strong>
-      <div class="expert-board-lines"></div>
-    </div>
+<section
+  class="section process-section"
+  id="method"
+  aria-labelledby="method-title"
+>
+  <div class="container">
+    <h2 id="method-title" class="display section-title">
+      {data.process.title}
+    </h2><ol class="process-grid">
+      {
+        data.process.items.map((item) => (
+          <li class="process-item">
+            <>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </>
+          </li>
+        ))
+      }
+    </ol>
   </div>
 </section>
 
 <section class="section" id="faq" aria-labelledby="faq-title">
   <div class="container faq-layout">
-    <div>
-      <h2 id="faq-title" class="display section-title">
-        {data.faq.title}
-      </h2>
-    </div><div class="faq-list">
+    <h2 id="faq-title" class="display">{data.faq.title}</h2><div
+      class="faq-list"
+    >
       {
         data.faq.items.map((item) => (
           <details class="faq-item">
@@ -237,13 +275,14 @@ const { data } = Astro.props as { data: Data };
 <section class="section form-section" id="contact" aria-labelledby="form-title">
   <div class="container form-layout">
     <div>
-      <h2 id="form-title" class="display section-title">
-        {data.form.title}
-      </h2><p class="lede">{data.form.lead}</p>
+      <h2 id="form-title" class="display">{copy.formTitle}</h2><p class="lede">
+        {copy.formText}
+      </p><p class="response-note">{copy.intro}</p><p class="disclaimer">
+        {copy.privacy}
+      </p>
     </div><LeadForm data={data} />
   </div>
 </section>
-
-<a class="mobile-contact-cta" href="#contact">
-  {data.hero.cta}<span aria-hidden="true">→</span>
-</a>
+<a class="mobile-contact-cta" href="#contact"
+  >{copy.cta}<span class="button-arrow" aria-hidden="true"></span></a
+>
