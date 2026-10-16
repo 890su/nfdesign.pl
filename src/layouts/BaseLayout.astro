@@ -12,10 +12,13 @@ interface Props {
   title: string;
   description: string;
   alternates: Alternate[];
+  homeHref?: string;
   nav: { method: string; result: string; price: string; faq: string };
   footer: { note: string; privacy: string; terms: string };
 }
-const { locale, title, description, alternates, nav, footer } = Astro.props;
+const { locale, title, description, alternates, homeHref, nav, footer } =
+  Astro.props;
+const homeLink = homeHref ?? `/${locale}/`;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 const labels = { pl: "Polski", uk: "Українська", ru: "Русский" };
 const a11y = {
@@ -84,7 +87,7 @@ const a11y = {
     <a class="skip-link" href="#main">{a11y.skip}</a>
     <header class="site-header" data-site-header>
       <div class="container header-inner">
-        <a class="brand" href={`/${locale}/`} aria-label="Need for Design">
+        <a class="brand" href={homeLink} aria-label="Need for Design">
           <span class="brand-mark">N/D</span><span
             >need <small>/ for design</small></span
           >
@@ -106,6 +109,9 @@ const a11y = {
           >
         </nav>
         <div class="header-actions">
+          <a class="header-cta" href="#contact"
+            >{a11y.navCta}<span aria-hidden="true">→</span></a
+          >
           <nav class="language-switch" aria-label={a11y.language}>
             {
               alternates.map((alternate) => (
@@ -143,7 +149,7 @@ const a11y = {
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="brand" href={`/${locale}/`}
+          <a class="brand" href={homeLink}
             ><span class="brand-mark">N/D</span><span
               >need <small>/ for design</small></span
             ></a

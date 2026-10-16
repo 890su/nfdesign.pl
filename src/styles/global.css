@@ -847,7 +847,7 @@ a {
 .legal-notice {
   padding: 1rem;
   background: #fff4d6;
-  border-left: 3px solid #9f7115;
+  border: 1px solid #9f7115;
 }
 
 @media (max-width: 900px) {
@@ -983,7 +983,7 @@ a {
   --radius-sm: 0;
   --radius-md: 0;
   --radius-lg: 0;
-  --shadow: 12px 16px 0 rgba(17, 21, 22, 0.12);
+  --shadow: 0 1.1rem 3.5rem rgba(17, 21, 22, 0.14);
   --h1: clamp(2.65rem, 5.35vw, 6.7rem);
   --h2: clamp(2rem, 3.8vw, 4.4rem);
   --h3: clamp(1.15rem, 1.8vw, 1.65rem);
@@ -1005,7 +1005,7 @@ body {
 
 .display {
   font-weight: 530;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.04em;
   line-height: 0.98;
   text-wrap: balance;
 }
@@ -1115,11 +1115,35 @@ body {
   color: var(--ink);
 }
 
-.hero-message > p:not(.eyebrow) {
+.hero-message > p:not(.hero-context):not(.hero-facts) {
   max-width: 39rem;
   margin: clamp(1.8rem, 3.2vw, 3.2rem) 0 2rem;
   color: var(--ink-soft);
   font-size: clamp(1.06rem, 1.4vw, 1.3rem);
+}
+
+.hero-context {
+  margin: 1.2rem 0 0;
+  color: var(--petrol-dark);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.1rem;
+  margin: clamp(1.75rem, 3vw, 2.5rem) 0 0;
+  color: var(--ink-soft);
+  font-size: 0.83rem;
+  font-weight: 650;
+}
+
+.hero-facts span + span {
+  padding-left: 1.1rem;
+  border-left: 1px solid var(--line-strong);
 }
 
 .button {
@@ -1128,7 +1152,7 @@ body {
   padding: 0.9rem 1.25rem;
   background: var(--clay);
   font-weight: 680;
-  box-shadow: 5px 5px 0 var(--ink);
+  box-shadow: 0 0.7rem 1.6rem rgba(17, 21, 22, 0.16);
   transition:
     transform 160ms ease,
     box-shadow 160ms ease,
@@ -1136,14 +1160,14 @@ body {
 }
 
 .button:hover {
-  transform: translate(-2px, -2px);
+  transform: translateY(-2px);
   background: #dc3f28;
-  box-shadow: 8px 8px 0 var(--ink);
+  box-shadow: 0 1rem 2.25rem rgba(17, 21, 22, 0.2);
 }
 
 .button:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--ink);
+  transform: translateY(0);
+  box-shadow: 0 0.35rem 0.9rem rgba(17, 21, 22, 0.16);
 }
 
 .button-ghost {
@@ -1662,6 +1686,31 @@ main section[id] {
   gap: 1rem;
 }
 
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  gap: 0.55rem;
+  padding: 0.55rem 0.8rem;
+  background: var(--clay);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.header-cta:hover {
+  background: #dc3f28;
+  box-shadow: 0 0.5rem 1.2rem rgba(17, 21, 22, 0.18);
+  transform: translateY(-1px);
+}
+
 .main-nav a {
   position: relative;
   min-height: 2.75rem;
@@ -1696,8 +1745,8 @@ main section[id] {
 }
 
 .proof-grid {
-  grid-template-columns: minmax(8rem, 0.36fr) minmax(0, 1.64fr);
-  gap: clamp(2rem, 6vw, 7rem);
+  grid-template-columns: 1fr;
+  gap: 0;
   min-height: 0;
   padding-block: clamp(2.2rem, 4vw, 3.6rem);
   align-items: stretch;
@@ -1719,6 +1768,14 @@ main section[id] {
   grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
   gap: clamp(2rem, 5vw, 6rem);
   align-items: center;
+}
+
+.split-heading--single {
+  grid-template-columns: 1fr;
+}
+
+.mobile-contact-cta {
+  display: none;
 }
 
 .proof-equation {
@@ -1859,6 +1916,10 @@ main section[id] {
     gap: 0.75rem;
   }
 
+  .header-cta {
+    display: none;
+  }
+
   .language-switch {
     gap: 0.55rem;
   }
@@ -1974,8 +2035,8 @@ main section[id] {
   }
 
   .proof-grid {
-    grid-template-columns: 7rem minmax(0, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .proof-message {
@@ -2028,6 +2089,38 @@ main section[id] {
     padding: 0 0 0.8rem;
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  body {
+    padding-bottom: 4.9rem;
+  }
+
+  .mobile-contact-cta {
+    position: fixed;
+    right: 1rem;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    left: 1rem;
+    z-index: 35;
+    display: flex;
+    min-height: 3.55rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: var(--clay);
+    box-shadow: 0 0.8rem 2rem rgba(17, 21, 22, 0.26);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 750;
+    text-decoration: none;
+  }
+
+  .mobile-contact-cta:focus-visible {
+    outline-color: var(--ink);
+  }
+
+  body:has(#contact:target) .mobile-contact-cta {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .proof-equation {

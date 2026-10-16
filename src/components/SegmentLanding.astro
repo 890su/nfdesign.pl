@@ -11,8 +11,8 @@ const { data } = Astro.props as { data: Data };
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-message">
-      <p class="eyebrow">{data.hero.eyebrow}</p>
       <h1 class="display">{data.hero.title}</h1>
+      <p class="hero-context">{data.hero.eyebrow}</p>
       <p>{data.hero.lead}</p>
       <div class="button-row">
         <a class="button" href="#contact"
@@ -21,6 +21,15 @@ const { data } = Astro.props as { data: Data };
           >{data.hero.secondaryCta}</a
         >
       </div>
+      <p class="hero-facts" aria-label="Najważniejsze informacje o usłudze">
+        <span
+          >{data.package.priceLabel}
+          {data.package.price}
+          {data.package.currency}</span
+        >
+        <span>{data.package.duration}</span>
+        <span>{data.package.included.at(-1)}</span>
+      </p>
     </div>
     <HeroDossier
       segment={data.segment}
@@ -33,7 +42,6 @@ const { data } = Astro.props as { data: Data };
 
 <aside class="proof-strip">
   <div class="container proof-grid">
-    <span class="proof-index" aria-hidden="true">01 / N·D</span>
     <div class="proof-message">
       <p class="proof-equation">
         <span>{data.proof.label}</span><i aria-hidden="true">→</i><strong
@@ -47,11 +55,8 @@ const { data } = Astro.props as { data: Data };
 
 <section class="section" aria-labelledby="pain-title">
   <div class="container">
-    <div class="split-heading">
-      <p class="eyebrow">{data.pains.eyebrow}</p><h2
-        id="pain-title"
-        class="display section-title"
-      >
+    <div class="split-heading split-heading--single">
+      <h2 id="pain-title" class="display section-title">
         {data.pains.title}
       </h2>
     </div>
@@ -78,10 +83,7 @@ const { data } = Astro.props as { data: Data };
 >
   <div class="container deliverables-layout">
     <div>
-      <p class="eyebrow">{data.deliverables.eyebrow}</p><h2
-        id="result-title"
-        class="display section-title"
-      >
+      <h2 id="result-title" class="display section-title">
         {data.deliverables.title}
       </h2>
     </div>
@@ -105,10 +107,7 @@ const { data } = Astro.props as { data: Data };
 <section class="section" id="example" aria-labelledby="example-title">
   <div class="container example-grid">
     <div>
-      <p class="eyebrow">{data.example.eyebrow}</p><h2
-        id="example-title"
-        class="display section-title"
-      >
+      <h2 id="example-title" class="display section-title">
         {data.example.title}
       </h2><p class="lede">{data.example.text}</p><ul class="plan-notes">
         {data.example.notes.map((note) => <li>{note}</li>)}
@@ -129,10 +128,7 @@ const { data } = Astro.props as { data: Data };
   aria-labelledby="method-title"
 >
   <div class="container">
-    <p class="eyebrow">{data.process.eyebrow}</p><h2
-      id="method-title"
-      class="display section-title"
-    >
+    <h2 id="method-title" class="display section-title">
       {data.process.title}
     </h2><div class="process-grid">
       {
@@ -153,10 +149,7 @@ const { data } = Astro.props as { data: Data };
 <section class="section" id="price" aria-labelledby="price-title">
   <div class="container package-layout">
     <div class="price-box">
-      <p class="eyebrow">{data.package.eyebrow}</p><h2
-        id="price-title"
-        class="display section-title"
-      >
+      <h2 id="price-title" class="display section-title">
         {data.package.title}
       </h2><div class="price">
         <span>{data.package.priceLabel}</span><strong
@@ -207,10 +200,7 @@ const { data } = Astro.props as { data: Data };
 <section class="section section-dark" aria-labelledby="expert-title">
   <div class="container expert-grid">
     <div>
-      <p class="eyebrow">{data.expert.eyebrow}</p><h2
-        id="expert-title"
-        class="display section-title"
-      >
+      <h2 id="expert-title" class="display section-title">
         {data.expert.title}
       </h2><p class="lede">{data.expert.text}</p><ul class="expert-points">
         {data.expert.points.map((point) => <li>{point}</li>)}
@@ -226,10 +216,7 @@ const { data } = Astro.props as { data: Data };
 <section class="section" id="faq" aria-labelledby="faq-title">
   <div class="container faq-layout">
     <div>
-      <p class="eyebrow">{data.faq.eyebrow}</p><h2
-        id="faq-title"
-        class="display section-title"
-      >
+      <h2 id="faq-title" class="display section-title">
         {data.faq.title}
       </h2>
     </div><div class="faq-list">
@@ -250,12 +237,13 @@ const { data } = Astro.props as { data: Data };
 <section class="section form-section" id="contact" aria-labelledby="form-title">
   <div class="container form-layout">
     <div>
-      <p class="eyebrow">{data.form.eyebrow}</p><h2
-        id="form-title"
-        class="display section-title"
-      >
+      <h2 id="form-title" class="display section-title">
         {data.form.title}
       </h2><p class="lede">{data.form.lead}</p>
     </div><LeadForm data={data} />
   </div>
 </section>
+
+<a class="mobile-contact-cta" href="#contact">
+  {data.hero.cta}<span aria-hidden="true">→</span>
+</a>
